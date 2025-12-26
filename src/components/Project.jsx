@@ -1,49 +1,56 @@
 import React, { useState } from "react";
-import ProjectDetails from "./ProjectDetails";
+import ProjectDetails from "./ProjectDetails.jsx";
 
-const Project = ({
-  title,
-  description,
-  subDescription,
-  href,
-  image,
-  tags,
-  setPreview,
-}) => {
-  const [isHidden, setIsHidden] = useState(false);
+const Project = ({ project, setPreview }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const {
+    title,
+    desc,
+    subdesc,
+    href,
+    spotlight,
+    tags,
+  } = project;
+
   return (
     <>
       <div
         className="flex-wrap items-center justify-between py-10 space-y-14 sm:flex sm:space-y-0"
-        onMouseEnter={() => setPreview(image)}
+        onMouseEnter={() => setPreview(spotlight)}
         onMouseLeave={() => setPreview(null)}
       >
         <div>
           <p className="text-2xl">{title}</p>
+
           <div className="flex gap-5 mt-2 text-sand">
-            {tags.map((tag) => (
+            {tags?.map((tag) => (
               <span key={tag.id}>{tag.name}</span>
             ))}
           </div>
         </div>
+
         <button
-          onClick={() => setIsHidden(true)}
+          type="button"
+          onClick={() => setIsOpen(true)}
           className="flex items-center gap-1 cursor-pointer hover-animation"
         >
           Read More
-          <img src="assets/arrow-right.svg" className="w-5" />
+          <img src="/assets/arrow-right.svg" className="w-5" alt="Arrow right" />
         </button>
       </div>
+
       <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent h-[1px] w-full" />
-      {isHidden && (
+
+      {isOpen && (
         <ProjectDetails
           title={title}
-          description={description}
-          subDescription={subDescription}
-          image={image}
+          description={desc}
+          subDescription={subdesc}
+          image={spotlight}
           tags={tags}
           href={href}
-          closeModal={() => setIsHidden(false)}
+          closeModal={() => setIsOpen(false)}
         />
       )}
     </>
