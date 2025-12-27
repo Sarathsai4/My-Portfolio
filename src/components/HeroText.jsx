@@ -2,7 +2,7 @@ import { FlipWords } from "./FlipWords";
 import { motion } from "framer-motion";
 
 const HeroText = () => {
-  const words = ["Secure", "Modern", "Scalable"];
+  const words = ["Scalable", "Data-Driven", "Cloud-Native"];
 
   const variants = {
     hidden: { opacity: 0, x: -50 },
@@ -31,7 +31,7 @@ const HeroText = () => {
             animate="visible"
             transition={{ delay: 1.2 }}
           >
-            A Developer <br /> Dedicated to Crafting
+            A Data Professional <br /> Dedicated to Crafting
           </motion.p>
 
           <motion.div
@@ -40,7 +40,10 @@ const HeroText = () => {
             animate="visible"
             transition={{ delay: 1.5 }}
           >
-            <FlipWords words={words} className="font-black text-white text-8xl" />
+            <FlipWords
+              words={words}
+              className="font-black text-white text-8xl"
+            />
           </motion.div>
 
           <motion.p
@@ -50,7 +53,7 @@ const HeroText = () => {
             animate="visible"
             transition={{ delay: 1.8 }}
           >
-            Web Solutions
+            Software Systems
           </motion.p>
         </div>
       </div>
@@ -84,7 +87,10 @@ const HeroText = () => {
             animate="visible"
             transition={{ delay: 1.5 }}
           >
-            <FlipWords words={words} className="font-bold text-white text-7xl" />
+            <FlipWords
+              words={words}
+              className="font-bold text-white text-7xl"
+            />
           </motion.div>
 
           <motion.p
@@ -94,7 +100,7 @@ const HeroText = () => {
             animate="visible"
             transition={{ delay: 1.8 }}
           >
-            Web Applications
+            Intelligent Systems
           </motion.p>
         </div>
       </div>
