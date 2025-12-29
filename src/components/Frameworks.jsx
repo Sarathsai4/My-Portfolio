@@ -1,17 +1,12 @@
 import { OrbitingCircles } from "./OrbitingCircles";
 
 export function Frameworks() {
-  // ✅ These must match EXACT filenames in: public/assets/logos/
   const skills = [
     "aws",
-    "aws-iam",
     "amazon-s3",
-    "amazon-quicksight",
     "apache-airflow",
     "apache-kafka",
     "apache-spark",
-    "apache-flink",
-    "apache-hive",
     "databricks",
     "snowflake",
     "google-bigquery",
@@ -19,11 +14,7 @@ export function Frameworks() {
     "docker",
     "terraform",
     "python",
-    "java",
-    "scala",
-    "r",
     "power-bi",
-    "looker",
     "mlflow",
     "langchain",
     "hugging-face",
@@ -31,23 +22,25 @@ export function Frameworks() {
     "tensorflow",
     "fastapi",
     "hadoop",
-    "cdc",
-    "elt",
-    "neptune",
-    "vba",
     "scikit-learn",
+    "scala",
+    "java",
+    "r",
   ];
+
+  const outer = skills.slice(0, 12);
+  const inner = skills.slice(12, 24);
 
   return (
     <div className="relative flex h-[15rem] w-full flex-col items-center justify-center">
-      <OrbitingCircles iconSize={40}>
-        {skills.map((skill) => (
+      <OrbitingCircles iconSize={40} radius={140}>
+        {outer.map((skill) => (
           <Icon key={skill} src={`/assets/logos/${skill}.svg`} />
         ))}
       </OrbitingCircles>
 
-      <OrbitingCircles iconSize={25} radius={100} reverse speed={2}>
-        {[...skills].reverse().map((skill) => (
+      <OrbitingCircles iconSize={26} radius={95} reverse speed={2}>
+        {inner.map((skill) => (
           <Icon key={`inner-${skill}`} src={`/assets/logos/${skill}.svg`} />
         ))}
       </OrbitingCircles>
@@ -59,6 +52,6 @@ const Icon = ({ src }) => (
   <img
     src={src}
     alt=""
-    className="duration-200 rounded-sm hover:scale-110"
+    className="w-full h-full object-contain duration-200 rounded-sm hover:scale-110"
   />
 );
