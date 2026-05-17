@@ -1,4 +1,5 @@
 import { certifications, contactEmail, education, skillGroups, toolLogos } from "../constants";
+import RoleTechBackdrop from "../components/RoleTechBackdrop";
 
 const engineerFocus = [
   {
@@ -28,8 +29,10 @@ const engineeringProjects = [
 
 const DataEngineer = () => {
   return (
-    <main className="pt-28 c-space">
-      <section className="role-hero">
+    <main className="relative isolate overflow-hidden pt-28 c-space role-page role-page-engineer">
+      <RoleTechBackdrop variant="engineer" />
+
+      <section className="relative z-10 role-hero">
         <div className="max-w-4xl">
           <p className="text-sm uppercase tracking-[0.35em] text-mint">Data Engineer</p>
           <h1 className="mt-5 text-4xl font-semibold md:text-7xl">
@@ -46,7 +49,7 @@ const DataEngineer = () => {
         </div>
       </section>
 
-      <section className="grid grid-cols-1 gap-4 mt-16 md:grid-cols-4">
+      <section className="relative z-10 grid grid-cols-1 gap-4 mt-16 md:grid-cols-4">
         {engineerFocus.map((item) => (
           <article className="role-card p-5 border border-white/10 bg-gradient-to-b from-storm to-indigo" key={item.title}>
             <h2 className="text-xl font-semibold">{item.title}</h2>
@@ -55,7 +58,7 @@ const DataEngineer = () => {
         ))}
       </section>
 
-      <section className="mt-20">
+      <section className="relative z-10 mt-20">
         <h2 className="text-heading">Engineering Stack</h2>
         <p className="max-w-3xl mt-4 subtext">
           Coverage includes the full engineer-facing stack from the resume: programming, cloud services,
@@ -64,7 +67,7 @@ const DataEngineer = () => {
         <SkillMatrix groups={skillGroups} />
       </section>
 
-      <section className="mt-20">
+      <section className="relative z-10 mt-20">
         <h2 className="text-heading">Relevant Engineering Work</h2>
         <div className="grid grid-cols-1 gap-4 mt-8 md:grid-cols-2">
           {engineeringProjects.map((project) => (
@@ -75,7 +78,7 @@ const DataEngineer = () => {
         </div>
       </section>
 
-      <section className="mt-20">
+      <section className="relative z-10 mt-20">
         <h2 className="text-heading">Tools & Credentials</h2>
         <LogoWall />
         <InfoList title="Certifications" items={certifications} />
