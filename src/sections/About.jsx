@@ -22,12 +22,12 @@ const About = () => {
 
         {/* Grid 3 */}
         <div className="grid-black-color grid-3">
-          <div className="z-10 w-[50%]">
+          <div className="relative z-10 w-[58%] sm:w-[52%]">
             <p className="headtext">Time Zone</p>
             <p className="subtext">I am based in Cincinnati and open to data analyst, analytics engineering, and data engineering roles.</p>
           </div>
-          <figure className="absolute left-[30%] top-[10%]">
-            <Globe />
+          <figure className="absolute right-3 top-1/2 size-[12.5rem] -translate-y-1/2 sm:right-6 sm:size-[14.5rem] md:size-[16rem]">
+            <Globe className="size-full max-w-none" />
           </figure>
         </div>
 

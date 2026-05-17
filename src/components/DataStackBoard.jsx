@@ -5,7 +5,7 @@ const stackItems = [
   {
     name: "SQL",
     logo: "assets/logos/postgresql.svg",
-    x: "10%",
+    x: "16%",
     y: "18%",
     align: "left",
     tooltipSide: "bottom",
@@ -16,9 +16,10 @@ const stackItems = [
   },
   {
     name: "Data Warehousing",
+    label: "Warehouse",
     logo: "assets/logos/snowflake.svg",
-    x: "34%",
-    y: "15%",
+    x: "37%",
+    y: "17%",
     align: "center",
     tooltipSide: "bottom",
     glow: "#57dbff",
@@ -28,9 +29,10 @@ const stackItems = [
   },
   {
     name: "Transformation",
+    label: "Transform",
     logo: "assets/logos/dbt.svg",
-    x: "61%",
-    y: "17%",
+    x: "62%",
+    y: "18%",
     align: "center",
     tooltipSide: "bottom",
     glow: "#ff694b",
@@ -40,8 +42,9 @@ const stackItems = [
   },
   {
     name: "Data Quality",
+    label: "Quality",
     logo: "assets/logos/cdc.svg",
-    x: "86%",
+    x: "83%",
     y: "18%",
     align: "right",
     tooltipSide: "bottom",
@@ -53,7 +56,7 @@ const stackItems = [
   {
     name: "Python",
     logo: "assets/logos/python.svg",
-    x: "19%",
+    x: "18%",
     y: "42%",
     align: "left",
     tooltipSide: "bottom",
@@ -64,6 +67,7 @@ const stackItems = [
   },
   {
     name: "Data Modeling",
+    label: "Modeling",
     logo: "assets/logos/microsoft-sql-server.svg",
     x: "45%",
     y: "42%",
@@ -77,7 +81,7 @@ const stackItems = [
   {
     name: "Spark",
     logo: "assets/logos/apache-spark.svg",
-    x: "72%",
+    x: "69%",
     y: "43%",
     align: "right",
     tooltipSide: "bottom",
@@ -88,8 +92,9 @@ const stackItems = [
   },
   {
     name: "Cloud Storage",
+    label: "Cloud",
     logo: "assets/logos/amazon-s3.svg",
-    x: "91%",
+    x: "83%",
     y: "45%",
     align: "right",
     tooltipSide: "top",
@@ -100,8 +105,9 @@ const stackItems = [
   },
   {
     name: "Orchestration",
+    label: "Orchestrate",
     logo: "assets/logos/apache-airflow.svg",
-    x: "12%",
+    x: "15%",
     y: "68%",
     align: "left",
     tooltipSide: "top",
@@ -113,7 +119,7 @@ const stackItems = [
   {
     name: "Streaming",
     logo: "assets/logos/apache-kafka.svg",
-    x: "34%",
+    x: "36%",
     y: "70%",
     align: "center",
     tooltipSide: "top",
@@ -125,7 +131,7 @@ const stackItems = [
   {
     name: "Lakehouse",
     logo: "assets/logos/databricks.svg",
-    x: "56%",
+    x: "58%",
     y: "72%",
     align: "center",
     tooltipSide: "top",
@@ -136,8 +142,9 @@ const stackItems = [
   },
   {
     name: "BI Dashboards",
+    label: "BI",
     logo: "assets/logos/power-bi.svg",
-    x: "77%",
+    x: "80%",
     y: "70%",
     align: "right",
     tooltipSide: "top",
@@ -182,8 +189,8 @@ const DataStackBoard = () => {
             top: item.y,
             translate: "-50% -50%",
             "--glow": item.glow,
-            "--float-delay": `${item.delay}s`,
-            "--float-duration": `${7.5 + item.delay}s`,
+            "--icon-delay": `${item.delay}s`,
+            "--icon-duration": `${4.8 + item.delay}s`,
           }}
           onMouseEnter={() => setActive(item.name)}
           onMouseLeave={() => setActive(null)}
@@ -199,7 +206,7 @@ const DataStackBoard = () => {
               loading="lazy"
             />
           </span>
-          <span className="data-stack-label">{item.name}</span>
+          <span className="data-stack-label">{item.label || item.name}</span>
 
           <AnimatePresence>
             {active === item.name && (
