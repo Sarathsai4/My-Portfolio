@@ -1116,7 +1116,9 @@ body {
 }
 
 .data-stack-node:hover,
-.data-stack-node:focus-visible {
+.data-stack-node:focus-visible,
+.data-stack-node.is-active {
+  z-index: 80;
   scale: 1.04;
   border-color: color-mix(in srgb, var(--glow) 72%, white);
   box-shadow:
@@ -1147,7 +1149,7 @@ body {
 }
 
 .data-stack-tooltip {
-  @apply pointer-events-none absolute w-56 rounded-lg bg-primary/95 p-4 shadow-2xl backdrop-blur-xl sm:w-64;
+  @apply pointer-events-none absolute z-[90] w-56 rounded-lg bg-primary/95 p-4 shadow-2xl backdrop-blur-xl sm:w-64;
   border: 1px solid color-mix(in srgb, var(--glow) 48%, rgba(255, 255, 255, 0.16));
   box-shadow: 0 0 34px color-mix(in srgb, var(--glow) 24%, transparent);
 }

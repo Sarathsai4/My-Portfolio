@@ -183,7 +183,7 @@ const DataStackBoard = () => {
         <button
           key={item.name}
           type="button"
-          className="data-stack-node"
+          className={`data-stack-node ${active === item.name ? "is-active" : ""}`}
           style={{
             left: item.x,
             top: item.y,
