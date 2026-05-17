@@ -24,7 +24,7 @@ const RolePathways = () => {
                 <p className="text-2xl font-semibold">{role.title}</p>
                 <p className="mt-2 text-sm text-aqua">{role.level}</p>
               </div>
-              <img src="/assets/arrow-up.svg" className="w-5 h-5" alt="" />
+              <img src={`${import.meta.env.BASE_URL}assets/arrow-up.svg`} className="w-5 h-5" alt="" />
             </div>
             <p className="mt-5 subtext">{role.desc}</p>
             <div className="flex flex-wrap gap-2 mt-6">

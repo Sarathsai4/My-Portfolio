@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import ProjectDetails from "./ProjectDetails.jsx";
 
 const Project = ({ project, setPreview }) => {
@@ -36,7 +36,11 @@ const Project = ({ project, setPreview }) => {
           className="flex items-center gap-1 cursor-pointer hover-animation"
         >
           Read More
-          <img src="/assets/arrow-right.svg" className="w-5" alt="Arrow right" />
+          <img
+            src={`${import.meta.env.BASE_URL}assets/arrow-right.svg`}
+            className="w-5"
+            alt="Arrow right"
+          />
         </button>
       </div>
 
