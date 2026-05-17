@@ -5,6 +5,7 @@ import Footer from "./sections/Footer";
 
 const About = lazy(() => import("./sections/About"));
 const RolePathways = lazy(() => import("./sections/RolePathways"));
+const MotionLayerScroller = lazy(() => import("./sections/MotionLayerScroller"));
 const Projects = lazy(() => import("./sections/Projects"));
 const Experiences = lazy(() => import("./sections/Experiences"));
 const Contact = lazy(() => import("./sections/Contact"));
@@ -74,6 +75,9 @@ const App = () => {
         </LazySection>
         <LazySection>
           <RolePathways />
+        </LazySection>
+        <LazySection>
+          <MotionLayerScroller />
         </LazySection>
         <LazySection>
           <Projects />
