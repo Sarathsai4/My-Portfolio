@@ -20,7 +20,7 @@ const About = () => {
             alt="Coding POV"
           />
           <div className="z-10">
-            <p className="headtext">Hi, I'm Sarath Sai Grandhe</p>
+            <p className="headtext">Hi, I am Sarath Sai Grandhe</p>
             <p className="subtext">
               I build the connective tissue between raw data and business decisions: analytics-ready pipelines, trusted KPI layers,
               executive dashboards, and governed datasets for analyst and engineer workflows.
@@ -50,7 +50,7 @@ const About = () => {
         <div className="grid-black-color grid-3">
           <div className="z-10 w-[50%]">
             <p className="headtext">Time Zone</p>
-            <p className="subtext">I'm based in Cincinnati and open to data analyst, analytics engineering, and data engineering roles.</p>
+            <p className="subtext">I am based in Cincinnati and open to data analyst, analytics engineering, and data engineering roles.</p>
           </div>
           <figure className="absolute left-[30%] top-[10%]">
             <Globe />

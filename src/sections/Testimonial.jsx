@@ -1,4 +1,3 @@
-import React from "react";
 import Marquee from "../components/Marquee";
 import { reviews } from "../constants";
 
