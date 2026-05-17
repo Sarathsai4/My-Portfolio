@@ -8,6 +8,7 @@ const RolePathways = lazy(() => import("./sections/RolePathways"));
 const Projects = lazy(() => import("./sections/Projects"));
 const Experiences = lazy(() => import("./sections/Experiences"));
 const Contact = lazy(() => import("./sections/Contact"));
+const WeatherAtmosphere = lazy(() => import("./sections/WeatherAtmosphere"));
 const DataAnalyst = lazy(() => import("./pages/DataAnalyst"));
 const DataEngineer = lazy(() => import("./pages/DataEngineer"));
 
@@ -65,6 +66,9 @@ const App = () => {
     return (
       <>
         <Hero />
+        <Suspense fallback={null}>
+          <WeatherAtmosphere />
+        </Suspense>
         <LazySection>
           <About />
         </LazySection>
