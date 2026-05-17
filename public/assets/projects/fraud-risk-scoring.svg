@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="820" viewBox="0 0 1280 820" role="img" aria-labelledby="title desc">
+  <title id="title">Fraud analytics and payment risk scoring background</title>
+  <desc id="desc">Risk scoring dashboard with payment events, anomaly signals, fraud alerts, and mitigation decision paths.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#100716"/><stop offset="0.48" stop-color="#171126"/><stop offset="1" stop-color="#030412"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1280" height="820" fill="url(#bg)"/>
+  <g opacity="0.12" stroke="#fff"><path d="M0 164h1280M0 308h1280M0 452h1280M0 596h1280"/><path d="M160 0v820M320 0v820M480 0v820M640 0v820M800 0v820M960 0v820M1120 0v820"/></g>
+  <g transform="translate(120 130)">
+    <rect width="360" height="220" rx="30" fill="#0c1426" stroke="#ea4884" stroke-width="3"/>
+    <text x="38" y="60" fill="#fff" font-family="Arial" font-size="30" font-weight="700">Payment Event</text>
+    <rect x="38" y="96" width="210" height="70" rx="16" fill="#ffffff" opacity="0.08" stroke="#fff" stroke-opacity="0.18"/>
+    <circle cx="72" cy="132" r="18" fill="#ea4884"/>
+    <path d="M110 124h96M110 146h62" stroke="#fff" stroke-opacity="0.55" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(600 96)">
+    <rect width="410" height="300" rx="34" fill="#0c1426" stroke="#33c2cc" stroke-width="3"/>
+    <text x="38" y="64" fill="#fff" font-family="Arial" font-size="30" font-weight="700">Risk Score</text>
+    <path d="M72 226a130 130 0 0 1 260 0" fill="none" stroke="#fff" stroke-opacity="0.12" stroke-width="26"/>
+    <path d="M72 226a130 130 0 0 1 214-99" fill="none" stroke="#ea4884" stroke-width="26" stroke-linecap="round" filter="url(#glow)"/>
+    <text x="164" y="214" fill="#ea4884" font-family="Arial" font-size="58" font-weight="800">87</text>
+    <text x="152" y="254" fill="#9fb4d7" font-family="Arial" font-size="20">high risk</text>
+  </g>
+  <g transform="translate(170 470)" font-family="Arial">
+    <rect width="940" height="160" rx="30" fill="#0c1426" stroke="#7a57db" stroke-width="3"/>
+    <text x="40" y="58" fill="#fff" font-size="28" font-weight="700">Anomaly Pattern Timeline</text>
+    <path d="M50 110h820" stroke="#fff" stroke-opacity="0.18"/>
+    <circle cx="170" cy="110" r="14" fill="#57db96"/><circle cx="310" cy="110" r="14" fill="#f9d94a"/><circle cx="470" cy="110" r="20" fill="#ea4884" filter="url(#glow)"/><circle cx="640" cy="110" r="14" fill="#33c2cc"/><circle cx="790" cy="110" r="18" fill="#ea4884" filter="url(#glow)"/>
+  </g>
+  <path d="M480 240C555 250 560 220 600 210M805 396C790 460 720 462 640 470" fill="none" stroke="#33c2cc" stroke-width="5" stroke-dasharray="12 12"/>
+  <text x="120" y="724" fill="#fff" font-family="Arial" font-size="28" font-weight="700">Fraud signals, scoring logic, and investigation-ready dashboards</text>
+</svg>

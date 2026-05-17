@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="820" viewBox="0 0 1280 820" role="img" aria-labelledby="title desc">
+  <title id="title">Inventory forecasting and optimization background</title>
+  <desc id="desc">Forecasting dashboard with demand curves, safety stock bands, reorder points, and inventory optimization signals.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#06101a"/><stop offset="0.48" stop-color="#142619"/><stop offset="1" stop-color="#030412"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1280" height="820" fill="url(#bg)"/>
+  <g opacity="0.12" stroke="#fff"><path d="M100 150h1060M100 280h1060M100 410h1060M100 540h1060M100 670h1060"/><path d="M180 90v620M340 90v620M500 90v620M660 90v620M820 90v620M980 90v620M1140 90v620"/></g>
+  <g transform="translate(120 120)">
+    <rect width="1040" height="590" rx="34" fill="#091323" stroke="#57db96" stroke-opacity="0.55" stroke-width="3"/>
+    <text x="46" y="68" fill="#fff" font-family="Arial" font-size="34" font-weight="700">Demand Forecast and Reorder Intelligence</text>
+    <path d="M80 430C210 260 302 320 420 250s210-70 330 30 196 74 270-70" fill="none" stroke="#57db96" stroke-width="9" stroke-linecap="round" filter="url(#glow)"/>
+    <path d="M80 500C220 440 320 470 430 420s205-60 320-14 184 20 270-32" fill="none" stroke="#f9d94a" stroke-width="5" stroke-linecap="round" opacity="0.85"/>
+    <path d="M80 360C210 210 320 270 420 194s230-96 350 18 176 86 250 0" fill="none" stroke="#33c2cc" stroke-width="4" stroke-linecap="round" opacity="0.62"/>
+    <rect x="78" y="470" width="944" height="58" fill="#57db96" opacity="0.08"/>
+    <text x="88" y="558" fill="#9fb4d7" font-family="Arial" font-size="18">safety stock band</text>
+    <g fill="#0c1426" stroke="#d6995c" stroke-width="2">
+      <rect x="90" y="110" width="150" height="104" rx="20"/><rect x="270" y="110" width="150" height="104" rx="20"/><rect x="450" y="110" width="150" height="104" rx="20"/><rect x="630" y="110" width="150" height="104" rx="20"/>
+    </g>
+    <g font-family="Arial" font-weight="700">
+      <text x="126" y="154" fill="#57db96" font-size="28">92%</text><text x="118" y="186" fill="#9fb4d7" font-size="16">fill rate</text>
+      <text x="304" y="154" fill="#f9d94a" font-size="28">14d</text><text x="300" y="186" fill="#9fb4d7" font-size="16">lead time</text>
+      <text x="486" y="154" fill="#33c2cc" font-size="28">+18%</text><text x="474" y="186" fill="#9fb4d7" font-size="16">demand</text>
+      <text x="668" y="154" fill="#d6995c" font-size="28">ROP</text><text x="658" y="186" fill="#9fb4d7" font-size="16">trigger</text>
+    </g>
+  </g>
+</svg>

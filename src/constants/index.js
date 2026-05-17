@@ -179,7 +179,7 @@ export const myProjects = [
       "Designed the warehouse output around consistent business metrics, reusable analytical datasets, and repeatable refresh patterns.",
     ],
     href: "",
-    spotlight: asset("assets/projects/accessories.jpg"),
+    spotlight: asset("assets/projects/kindle-etl-analytics.svg"),
     tags: [
       { id: 1, name: "AWS", path: asset("assets/logos/aws.svg") },
       { id: 2, name: "Redshift", path: asset("assets/logos/aws.svg") },
@@ -199,7 +199,7 @@ export const myProjects = [
       "Optimized Spark jobs through partitioning, query tuning, and structured exception handling.",
     ],
     href: "",
-    spotlight: asset("assets/projects/blazor-app.jpg"),
+    spotlight: asset("assets/projects/lakehouse-modernization.svg"),
     tags: [
       { id: 1, name: "Spark", path: asset("assets/logos/apache-spark.svg") },
       { id: 2, name: "Delta Lake", path: asset("assets/logos/databricks.svg") },
@@ -218,7 +218,7 @@ export const myProjects = [
       "Structured alerting and documentation so data teams could triage issues before they reached reporting users.",
     ],
     href: "",
-    spotlight: asset("assets/projects/game-engine.jpg"),
+    spotlight: asset("assets/projects/streaming-observability.svg"),
     tags: [
       { id: 1, name: "Kafka", path: asset("assets/logos/apache-kafka.svg") },
       { id: 2, name: "Flink", path: asset("assets/logos/apache-flink.svg") },
@@ -237,7 +237,7 @@ export const myProjects = [
       "Reduced reporting discrepancies by strengthening data dictionaries, business glossaries, and data quality monitoring.",
     ],
     href: "",
-    spotlight: asset("assets/projects/auth-system.jpg"),
+    spotlight: asset("assets/projects/kpi-governance.svg"),
     tags: [
       { id: 1, name: "Snowflake", path: asset("assets/logos/snowflake.svg") },
       { id: 2, name: "Power BI", path: asset("assets/logos/power-bi.svg") },
@@ -256,7 +256,7 @@ export const myProjects = [
       "Created reusable reporting logic for procurement and operations teams.",
     ],
     href: "",
-    spotlight: asset("assets/projects/elearning.jpg"),
+    spotlight: asset("assets/projects/inventory-forecasting.svg"),
     tags: [
       { id: 1, name: "Python", path: asset("assets/logos/python.svg") },
       { id: 2, name: "SQL", path: asset("assets/logos/postgresql.svg") },
@@ -275,7 +275,7 @@ export const myProjects = [
       "Improved analytical responsiveness by organizing fraud signals into trusted, reusable reporting layers.",
     ],
     href: "",
-    spotlight: asset("assets/projects/wordpress-theme.jpg"),
+    spotlight: asset("assets/projects/fraud-risk-scoring.svg"),
     tags: [
       { id: 1, name: "Power BI", path: asset("assets/logos/power-bi.svg") },
       { id: 2, name: "Excel", path: asset("assets/logos/vba.svg") },
