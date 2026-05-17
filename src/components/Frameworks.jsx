@@ -2,11 +2,22 @@ import { OrbitingCircles } from "./OrbitingCircles";
 
 export function Frameworks() {
   const skills = [
-    "aws",
-    "snowflake",
     "python",
+    "postgresql",
+    "aws",
+    "amazon-s3",
+    "snowflake",
+    "google-bigquery",
+    "apache-spark",
+    "apache-kafka",
+    "apache-airflow",
+    "databricks",
+    "power-bi",
+    "tableau",
+    "looker",
     "docker",
-    // ...your list
+    "kubernetes",
+    "github-actions",
   ];
 
   return (
@@ -37,6 +48,6 @@ const Icon = ({ src }) => (
     src={src}
     alt=""
     className="w-full h-full object-contain duration-200 rounded-sm hover:scale-110"
-    onError={() => console.log("❌ Missing logo:", src)}
+    onError={() => console.log("Missing logo:", src)}
   />
 );

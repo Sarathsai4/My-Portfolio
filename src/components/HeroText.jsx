@@ -1,8 +1,8 @@
 import { FlipWords } from "./FlipWords";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 const HeroText = () => {
-  const words = ["Scalable", "Data-Driven", "Cloud-Native"];
+  const words = ["Trusted", "Cloud-Native", "Analytics-Ready"];
 
   const variants = {
     hidden: { opacity: 0, x: -50 },
@@ -20,7 +20,7 @@ const HeroText = () => {
           animate="visible"
           transition={{ delay: 1 }}
         >
-          Hi I'm Sujith Srinivas
+          Hi, I'm Sarath Sai Grandhe
         </motion.h1>
 
         <div className="flex flex-col items-start">
@@ -31,7 +31,7 @@ const HeroText = () => {
             animate="visible"
             transition={{ delay: 1.2 }}
           >
-            A Data Professional <br /> Dedicated to Crafting
+            Data Analyst & Data Engineer <br /> building
           </motion.p>
 
           <motion.div
@@ -53,8 +53,23 @@ const HeroText = () => {
             animate="visible"
             transition={{ delay: 1.8 }}
           >
-            Software Systems
+            Data Products
           </motion.p>
+
+          <motion.div
+            className="flex flex-wrap gap-4 mt-8"
+            variants={variants}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 2 }}
+          >
+            <a className="role-link role-link-primary" href="#/data-engineer">
+              Data Engineering
+            </a>
+            <a className="role-link" href="#/data-analyst">
+              Data Analytics
+            </a>
+          </motion.div>
         </div>
       </div>
 
@@ -67,7 +82,7 @@ const HeroText = () => {
           animate="visible"
           transition={{ delay: 1 }}
         >
-          Hi, I'm Sujith
+          Hi, I'm Sarath
         </motion.p>
 
         <div>
@@ -100,8 +115,23 @@ const HeroText = () => {
             animate="visible"
             transition={{ delay: 1.8 }}
           >
-            Intelligent Systems
+            Data Products
           </motion.p>
+
+          <motion.div
+            className="flex flex-col gap-3 mt-6"
+            variants={variants}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 2 }}
+          >
+            <a className="role-link role-link-primary" href="#/data-engineer">
+              Data Engineering
+            </a>
+            <a className="role-link" href="#/data-analyst">
+              Data Analytics
+            </a>
+          </motion.div>
         </div>
       </div>
     </div>

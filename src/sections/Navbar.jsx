@@ -9,13 +9,23 @@ function Navigation() {
         </a>
       </li>
       <li className="nav-li">
-        <a className="nav-link" href="#about">
-          About
+        <a className="nav-link" href="#/data-analyst">
+          Data Analyst
+        </a>
+      </li>
+      <li className="nav-li">
+        <a className="nav-link" href="#/data-engineer">
+          Data Engineer
+        </a>
+      </li>
+      <li className="nav-li">
+        <a className="nav-link" href="#projects">
+          Projects
         </a>
       </li>
       <li className="nav-li">
         <a className="nav-link" href="#work">
-          Work
+          Experience
         </a>
       </li>
       <li className="nav-li">
@@ -33,10 +43,10 @@ const Navbar = () => {
       <div className="mx-auto c-space max-w-7xl">
         <div className="flex items-center justify-between py-2 sm:py-0">
           <a
-            href="/"
+            href="#home"
             className="text-xl font-bold transition-colors text-neutral-400 hover:text-white"
           >
-            Sujith
+            Sarath
           </a>
           <button
             onClick={() => setIsOpen(!isOpen)}
