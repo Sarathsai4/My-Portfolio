@@ -2,6 +2,7 @@ import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import Alert from "../components/Alert";
 import { Particles } from "../components/Particles";
+import { contactEmail } from "../constants";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -59,7 +60,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="relative flex items-center c-space section-spacing">
+    <section id="contact" className="relative flex items-center c-space section-spacing">
       <Particles
         className="absolute inset-0 -z-50"
         quantity={100}
@@ -74,14 +75,14 @@ const Contact = () => {
         <div className="flex flex-col items-start w-full gap-5 mb-10">
           <h2 className="text-heading">Let's Talk</h2>
           <p className="font-normal text-neutral-400">
-            Whether you're looking to collaborate, discuss an opportunity,
-            or build something impactful, feel free to reach out.
+            For data analyst, analytics engineering, and data engineering opportunities, reach me at{" "}
+            <a className="text-white" href={`mailto:${contactEmail}`}>{contactEmail}</a>.
           </p>
         </div>
 
         <form className="w-full" onSubmit={handleSubmit}>
           <div className="mb-5">
-            <label htmlFor="name" className="feild-label">
+            <label htmlFor="name" className="field-label">
               Full Name
             </label>
             <input
@@ -97,7 +98,7 @@ const Contact = () => {
           </div>
 
           <div className="mb-5">
-            <label htmlFor="email" className="feild-label">
+            <label htmlFor="email" className="field-label">
               Email
             </label>
             <input
@@ -113,7 +114,7 @@ const Contact = () => {
           </div>
 
           <div className="mb-5">
-            <label htmlFor="message" className="feild-label">
+            <label htmlFor="message" className="field-label">
               Message
             </label>
             <textarea
