@@ -173,7 +173,7 @@ const DataStackBoard = () => {
       </p>
 
       {stackItems.map((item) => (
-        <motion.button
+        <button
           key={item.name}
           type="button"
           className="data-stack-node"
@@ -182,42 +182,9 @@ const DataStackBoard = () => {
             top: item.y,
             translate: "-50% -50%",
             "--glow": item.glow,
+            "--float-delay": `${item.delay}s`,
+            "--float-duration": `${7.5 + item.delay}s`,
           }}
-          initial={{ opacity: 0, scale: 0.7 }}
-          animate={{
-            opacity: 1,
-            scale: 1,
-            x: [0, 8, -7, 0],
-            y: [0, -7, 8, 0],
-            rotate: [0, 1.4, -1.6, 0],
-          }}
-          transition={{
-            opacity: { duration: 0.35, delay: item.delay },
-            scale: { duration: 0.35, delay: item.delay },
-            x: {
-              duration: 7 + item.delay,
-              repeat: Infinity,
-              repeatType: "mirror",
-              ease: "easeInOut",
-              delay: item.delay,
-            },
-            y: {
-              duration: 6 + item.delay,
-              repeat: Infinity,
-              repeatType: "mirror",
-              ease: "easeInOut",
-              delay: item.delay,
-            },
-            rotate: {
-              duration: 8,
-              repeat: Infinity,
-              repeatType: "mirror",
-              ease: "easeInOut",
-              delay: item.delay,
-            },
-          }}
-          whileHover={{ scale: 1.1, zIndex: 30 }}
-          whileFocus={{ scale: 1.1, zIndex: 30 }}
           onMouseEnter={() => setActive(item.name)}
           onMouseLeave={() => setActive(null)}
           onFocus={() => setActive(item.name)}
@@ -239,10 +206,10 @@ const DataStackBoard = () => {
               <motion.span
                 className={getTooltipClass(item)}
                 style={{ "--glow": item.glow }}
-                initial={{ opacity: 0, y: 10, scale: 0.92, filter: "blur(8px)" }}
-                animate={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
-                exit={{ opacity: 0, y: 8, scale: 0.94, filter: "blur(8px)" }}
-                transition={{ duration: 0.22, ease: "easeOut" }}
+                initial={{ opacity: 0, y: 8, scale: 0.96 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: 6, scale: 0.97 }}
+                transition={{ duration: 0.18, ease: "easeOut" }}
               >
                 <span className="block text-sm font-semibold text-white">
                   {item.name}
@@ -253,7 +220,7 @@ const DataStackBoard = () => {
               </motion.span>
             )}
           </AnimatePresence>
-        </motion.button>
+        </button>
       ))}
     </div>
   );

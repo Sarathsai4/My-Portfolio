@@ -37,9 +37,10 @@ const GLOBE_CONFIG = {
 };
 
 export function Globe({ className, config = GLOBE_CONFIG }) {
-  let phi = 0;
-  let width = 0;
   const canvasRef = useRef(null);
+  const phi = useRef(0);
+  const width = useRef(0);
+  const isVisible = useRef(true);
   const pointerInteracting = useRef(null);
   const pointerInteractionMovement = useRef(0);
 
@@ -68,28 +69,41 @@ export function Globe({ className, config = GLOBE_CONFIG }) {
   useEffect(() => {
     const onResize = () => {
       if (canvasRef.current) {
-        width = canvasRef.current.offsetWidth;
+        width.current = canvasRef.current.offsetWidth;
       }
     };
 
     window.addEventListener("resize", onResize);
     onResize();
 
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        isVisible.current = entry.isIntersecting;
+      },
+      { threshold: 0.05 }
+    );
+
+    if (canvasRef.current) observer.observe(canvasRef.current);
+
     const globe = createGlobe(canvasRef.current, {
       ...config,
-      width: width * 2,
-      height: width * 2,
+      devicePixelRatio: Math.min(window.devicePixelRatio || 1, 1.5),
+      width: width.current * 2,
+      height: width.current * 2,
       onRender: (state) => {
-        if (!pointerInteracting.current) phi += 0.005;
-        state.phi = phi + rs.get();
-        state.width = width * 2;
-        state.height = width * 2;
+        if (isVisible.current && !pointerInteracting.current) {
+          phi.current += 0.0035;
+        }
+        state.phi = phi.current + rs.get();
+        state.width = width.current * 2;
+        state.height = width.current * 2;
       },
     });
 
     setTimeout(() => (canvasRef.current.style.opacity = "1"), 0);
     return () => {
       globe.destroy();
+      observer.disconnect();
       window.removeEventListener("resize", onResize);
     };
   }, [rs, config]);

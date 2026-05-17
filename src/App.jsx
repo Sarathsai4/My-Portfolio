@@ -1,14 +1,21 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import Navbar from "./sections/Navbar";
 import Hero from "./sections/Hero";
-import About from "./sections/About";
-import RolePathways from "./sections/RolePathways";
-import Projects from "./sections/Projects";
-import Experiences from "./sections/Experiences";
-import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
-import DataAnalyst from "./pages/DataAnalyst";
-import DataEngineer from "./pages/DataEngineer";
+
+const About = lazy(() => import("./sections/About"));
+const RolePathways = lazy(() => import("./sections/RolePathways"));
+const Projects = lazy(() => import("./sections/Projects"));
+const Experiences = lazy(() => import("./sections/Experiences"));
+const Contact = lazy(() => import("./sections/Contact"));
+const DataAnalyst = lazy(() => import("./pages/DataAnalyst"));
+const DataEngineer = lazy(() => import("./pages/DataEngineer"));
+
+const LazySection = ({ children }) => (
+  <Suspense fallback={<div className="min-h-[40vh]" aria-hidden="true" />}>
+    {children}
+  </Suspense>
+);
 
 const getPage = () => {
   if (typeof window === "undefined") return "home";
@@ -40,17 +47,39 @@ const App = () => {
   }, [page]);
 
   const renderPage = () => {
-    if (page === "data-analyst") return <DataAnalyst />;
-    if (page === "data-engineer") return <DataEngineer />;
+    if (page === "data-analyst") {
+      return (
+        <LazySection>
+          <DataAnalyst />
+        </LazySection>
+      );
+    }
+    if (page === "data-engineer") {
+      return (
+        <LazySection>
+          <DataEngineer />
+        </LazySection>
+      );
+    }
 
     return (
       <>
         <Hero />
-        <About />
-        <RolePathways />
-        <Projects />
-        <Experiences />
-        <Contact />
+        <LazySection>
+          <About />
+        </LazySection>
+        <LazySection>
+          <RolePathways />
+        </LazySection>
+        <LazySection>
+          <Projects />
+        </LazySection>
+        <LazySection>
+          <Experiences />
+        </LazySection>
+        <LazySection>
+          <Contact />
+        </LazySection>
       </>
     );
   };

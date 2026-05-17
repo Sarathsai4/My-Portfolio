@@ -1,4 +1,5 @@
 import { contactEmail, roleCards } from "../constants";
+import { useEffect, useRef } from "react";
 
 const roleMetrics = {
   "Data Analyst": ["KPI governance", "Customer analytics", "BI storytelling"],
@@ -6,10 +7,41 @@ const roleMetrics = {
 };
 
 const RolePathways = () => {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    if (prefersReducedMotion) {
+      video.pause();
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          video.play().catch(() => {});
+        } else {
+          video.pause();
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className="c-space section-spacing" id="roles">
       <div className="relative overflow-hidden cinematic-role-frame">
         <video
+          ref={videoRef}
           className="cinematic-role-video"
           autoPlay
           muted
