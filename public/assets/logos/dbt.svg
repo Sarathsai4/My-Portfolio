@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">dbt</title>
+  <desc id="desc">dbt data build tool wordmark</desc>
+  <rect width="256" height="256" rx="56" fill="#ff694b"/>
+  <path d="M70 155c0 18 13 31 31 31 9 0 17-3 22-9v7h22V68h-24v43c-5-5-13-8-22-8-17 0-29 13-29 31v21Zm24-20c0-8 6-13 14-13 7 0 14 5 14 13v19c0 8-7 13-14 13-8 0-14-5-14-13v-19Zm62 49h24v-42c0-12 8-18 19-18h7v-22h-5c-10 0-18 4-23 12v-10h-22v80Zm66-61h-13v-20h13V82h24v21h16v20h-16v32c0 7 3 10 10 10h7v20h-13c-18 0-28-10-28-28v-34Z" fill="#fff"/>
+  <path d="M42 75h42v22H42V75Zm0 42h42v22H42v-22Zm0 42h22v22H42v-22Z" fill="#111827" opacity=".22"/>
+</svg>

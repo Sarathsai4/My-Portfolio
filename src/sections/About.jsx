@@ -1,12 +1,9 @@
-import { useRef } from "react";
-import Card from "../components/Card";
+import DataStackBoard from "../components/DataStackBoard";
 import { Globe } from "../components/globe";
 import CopyEmailButton from "../components/CopyEmailButton";
 import { Frameworks } from "../components/Frameworks";
 
 const About = () => {
-  const grid2Container = useRef();
-
   return (
     <section className="c-space section-spacing" id="about">
       <h2 className="text-heading">About Me</h2>
@@ -31,19 +28,7 @@ const About = () => {
 
         {/* Grid 2 */}
         <div className="grid-default-color grid-2">
-          <div ref={grid2Container} className="flex items-center justify-center w-full h-full">
-            <p className="flex items-end text-4xl text-gray-500">DATA IS DECISION READY</p>
-
-            <Card style={{ rotate: "75deg", top: "30%", left: "20%" }} text="SQL" containerRef={grid2Container} />
-            <Card style={{ rotate: "-30deg", top: "60%", left: "45%" }} text="KPI Logic" containerRef={grid2Container} />
-            <Card style={{ rotate: "90deg", bottom: "30%", left: "70%" }} text="Data Quality" containerRef={grid2Container} />
-            <Card style={{ rotate: "-45deg", top: "55%", left: "0%" }} text="Lakehouse" containerRef={grid2Container} />
-            <Card style={{ rotate: "20deg", top: "10%", left: "38%" }} text="dbt" containerRef={grid2Container} />
-
-            <Card style={{ rotate: "30deg", top: "70%", left: "70%" }} image="assets/logos/power-bi.svg" containerRef={grid2Container} />
-            <Card style={{ rotate: "-45deg", top: "70%", left: "25%" }} image="assets/logos/python.svg" containerRef={grid2Container} />
-            <Card style={{ rotate: "-45deg", top: "5%", left: "10%" }} image="assets/logos/apache-spark.svg" containerRef={grid2Container} />
-          </div>
+          <DataStackBoard />
         </div>
 
         {/* Grid 3 */}
