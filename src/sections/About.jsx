@@ -2,6 +2,7 @@ import DataStackBoard from "../components/DataStackBoard";
 import { Globe } from "../components/globe";
 import CopyEmailButton from "../components/CopyEmailButton";
 import { Frameworks } from "../components/Frameworks";
+import InteractiveIntroCard from "../components/InteractiveIntroCard";
 
 const About = () => {
   return (
@@ -10,20 +11,8 @@ const About = () => {
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem] mt-12">
         {/* Grid 1 */}
-        <div className="flex items-end grid-default-color grid-1">
-          <img
-            src="assets/coding-pov.png"
-            className="absolute scale-[1.75] -right-[5rem] -top-[1rem] md:scale-[3] md:left-50 md:inset-y-10 lg:scale-[2.5]"
-            alt="Coding POV"
-          />
-          <div className="z-10">
-            <p className="headtext">Hi, I am Sarath Sai Grandhe</p>
-            <p className="subtext">
-              I build the connective tissue between raw data and business decisions: analytics-ready pipelines, trusted KPI layers,
-              executive dashboards, and governed datasets for analyst and engineer workflows.
-            </p>
-          </div>
-          <div className="absolute inset-x-0 pointer-events-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
+        <div className="grid-1">
+          <InteractiveIntroCard />
         </div>
 
         {/* Grid 2 */}
