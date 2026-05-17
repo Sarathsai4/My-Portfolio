@@ -83,6 +83,110 @@ body {
   @apply rounded-md border border-white/10 bg-white/5 px-3 py-1 text-sm text-neutral-300;
 }
 
+.cinematic-role-frame {
+  @apply min-h-screen rounded-2xl border border-white/10 p-6 shadow-2xl shadow-black/40 md:p-10 lg:p-12;
+  background: #030412;
+}
+
+.cinematic-role-video {
+  @apply absolute inset-0 h-full w-full object-cover;
+  filter: saturate(0.92) contrast(1.12) brightness(0.72);
+  transform: scale(1.04);
+  animation: cinematic-video-drift 18s ease-in-out infinite alternate;
+}
+
+.cinematic-role-grade {
+  @apply absolute inset-0;
+  background:
+    linear-gradient(90deg, rgba(3, 4, 18, 0.92) 0%, rgba(3, 4, 18, 0.7) 42%, rgba(3, 4, 18, 0.42) 100%),
+    linear-gradient(180deg, rgba(3, 4, 18, 0.24), rgba(3, 4, 18, 0.9)),
+    radial-gradient(circle at 76% 22%, rgba(51, 194, 204, 0.24), transparent 30%),
+    radial-gradient(circle at 28% 78%, rgba(122, 87, 219, 0.18), transparent 32%);
+}
+
+.cinematic-role-lines {
+  @apply absolute inset-0 opacity-50;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+    repeating-linear-gradient(115deg, transparent 0 7rem, rgba(51, 194, 204, 0.16) 7rem 7.08rem, transparent 7.08rem 12rem);
+  background-size: 5rem 5rem, 5rem 5rem, 220% 220%;
+  animation: cinematic-lines-drift 20s linear infinite;
+  mask-image: radial-gradient(circle at center, black 0%, transparent 74%);
+}
+
+.cinematic-role-vignette {
+  @apply absolute inset-0;
+  box-shadow: inset 0 0 120px rgba(0, 0, 0, 0.78);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.24), transparent 34%, rgba(0, 0, 0, 0.56));
+}
+
+.cinematic-profile-link {
+  @apply inline-flex items-center justify-center rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-medium text-white/85 backdrop-blur-md transition duration-200 hover:-translate-y-0.5 hover:border-aqua/55 hover:bg-aqua/15 hover:text-white;
+  box-shadow: 0 0 22px rgba(51, 194, 204, 0.12);
+}
+
+.cinematic-role-card {
+  @apply relative overflow-hidden rounded-xl border border-white/12 bg-midnight/58 p-6 text-white backdrop-blur-xl transition duration-300 md:p-7;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 22px 50px rgba(0, 0, 0, 0.32);
+}
+
+.cinematic-role-card::before {
+  content: "";
+  @apply absolute inset-0 opacity-0 transition duration-300;
+  background:
+    linear-gradient(135deg, rgba(51, 194, 204, 0.18), transparent 44%),
+    radial-gradient(circle at 82% 0%, rgba(122, 87, 219, 0.18), transparent 38%);
+}
+
+.cinematic-role-card:hover {
+  @apply -translate-y-1 border-aqua/35;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 0 36px rgba(51, 194, 204, 0.18),
+    0 28px 64px rgba(0, 0, 0, 0.42);
+}
+
+.cinematic-role-card:hover::before {
+  opacity: 1;
+}
+
+.cinematic-role-card > * {
+  @apply relative;
+}
+
+.cinematic-role-arrow {
+  @apply flex size-10 shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/10 transition duration-300 group-hover:border-aqua/50 group-hover:bg-aqua/20;
+}
+
+.cinematic-role-metric {
+  @apply rounded-lg border border-white/10 bg-white/8 px-3 py-2 text-xs font-medium text-white/70;
+}
+
+.cinematic-skill-pill {
+  @apply rounded-full border border-white/12 bg-primary/45 px-3 py-1 text-sm text-white/75;
+}
+
+@keyframes cinematic-video-drift {
+  from {
+    transform: scale(1.04) translate3d(-1.2%, -0.7%, 0);
+  }
+  to {
+    transform: scale(1.09) translate3d(1.2%, 0.7%, 0);
+  }
+}
+
+@keyframes cinematic-lines-drift {
+  from {
+    background-position: 0 0, 0 0, 0% 50%;
+  }
+  to {
+    background-position: 5rem 5rem, 5rem 5rem, 100% 50%;
+  }
+}
+
 .data-stack-board {
   border-radius: 0.75rem;
   background:
