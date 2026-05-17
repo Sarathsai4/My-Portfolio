@@ -1265,7 +1265,30 @@ body {
 }
 
 .nav-link {
-  @apply text-lg md:text-base hover:text-white transition-colors;
+  @apply relative inline-flex text-lg md:text-base hover:text-white transition-colors focus-visible:outline-none;
+}
+
+.nav-link::after {
+  content: "";
+  @apply pointer-events-none absolute left-0 right-0 h-0.5 rounded-full;
+  bottom: -0.35rem;
+  background: linear-gradient(90deg, transparent, #ff7a33 18%, #ffb347 50%, #ff7a33 82%, transparent);
+  box-shadow:
+    0 0 8px rgba(255, 122, 51, 0.8),
+    0 0 18px rgba(255, 122, 51, 0.45),
+    0 0 30px rgba(255, 179, 71, 0.24);
+  opacity: 0;
+  transform: scaleX(0.18);
+  transform-origin: center;
+  transition:
+    opacity 180ms ease,
+    transform 240ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.nav-link:hover::after,
+.nav-link:focus-visible::after {
+  opacity: 1;
+  transform: scaleX(1);
 }
 /* Button Components */
 .btn {
