@@ -24,6 +24,10 @@ const analystProjects = [
   {
     title: "User Lifecycle, Retention & Churn Analytics Dashboard",
     stack: ["SQL", "Python", "Tableau", "Looker", "Snowflake", "Customer Analytics"],
+    accent: "#33c2cc",
+    visual: "lifecycle",
+    metric: "Retention +18%",
+    signals: ["Acquire", "Engage", "Retain", "Churn Risk"],
     summary:
       "Built a user lifecycle analytics dashboard to analyze customer behavior across acquisition, engagement, retention, and churn stages. Developed SQL-based datasets to track platform usage, content engagement, active user trends, retention cohorts, and churn-risk indicators.",
     impact:
@@ -32,6 +36,10 @@ const analystProjects = [
   {
     title: "Content Engagement & Subscriber Behavior Insights",
     stack: ["SQL", "Python", "Power BI", "Tableau", "BigQuery", "Statistical Analysis"],
+    accent: "#ffb347",
+    visual: "engagement",
+    metric: "Engagement 72%",
+    signals: ["Views", "Watch Time", "Categories", "Subscriber Value"],
     summary:
       "Analyzed content consumption, user activity, and engagement trends to understand how viewing behavior influences retention, repeat usage, and subscriber value. Used SQL and Python to segment users by engagement level and identify high-performing content categories.",
     impact:
@@ -40,6 +48,10 @@ const analystProjects = [
   {
     title: "Enterprise Customer Data Quality and KPI Governance Analytics",
     stack: ["SQL", "Python", "Power BI", "Tableau", "Snowflake", "Data Validation"],
+    accent: "#57db96",
+    visual: "governance",
+    metric: "Discrepancy -35%",
+    signals: ["Rules", "KPI Logic", "Reconcile", "Trust"],
     summary:
       "Built a customer data quality and KPI governance framework to validate business metrics, reconcile reporting logic, and improve trust in analytics-ready datasets. Developed SQL validation checks, dashboards, and documentation for KPI definitions, assumptions, rules, and reporting methodology.",
     impact:
@@ -48,6 +60,10 @@ const analystProjects = [
   {
     title: "Real-Time KPI Monitoring and Trusted Dataset Development",
     stack: ["SQL", "Python", "Power BI", "Tableau", "BigQuery", "Data Quality"],
+    accent: "#7a57db",
+    visual: "monitoring",
+    metric: "Timeliness +30%",
+    signals: ["Freshness", "SLA", "Volume", "Exceptions"],
     summary:
       "Created near real-time KPI monitoring logic to track data freshness, reporting SLAs, volume changes, exception patterns, and dashboard-impacting data issues before they affected business users.",
     impact:
@@ -104,9 +120,11 @@ const DataAnalyst = () => {
         <div className="grid grid-cols-1 gap-4 mt-8 md:grid-cols-2">
           {analystProjects.map((project) => (
             <div
-              className="p-5 border role-card border-white/10 bg-primary/80"
+              className="analyst-project-card role-card"
               key={project.title}
+              style={{ "--project-accent": project.accent }}
             >
+              <AnalystProjectVisual project={project} />
               <p className="text-lg font-semibold text-white">{project.title}</p>
               <div className="flex flex-wrap gap-2 mt-4">
                 {project.stack.map((item) => (
@@ -144,6 +162,31 @@ const SkillMatrix = ({ groups }) => (
         </div>
       </article>
     ))}
+  </div>
+);
+
+const AnalystProjectVisual = ({ project }) => (
+  <div className={`analyst-project-visual analyst-project-visual-${project.visual}`}>
+    <div className="analyst-project-orbit" />
+    <div className="analyst-project-scan" />
+    <div className="analyst-project-dashboard">
+      <div className="analyst-project-metric">
+        <span>{project.visual.replace("-", " ")}</span>
+        <strong>{project.metric}</strong>
+      </div>
+      <div className="analyst-project-bars" aria-hidden="true">
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+      </div>
+      <div className="analyst-project-flow" aria-hidden="true">
+        {project.signals.map((signal) => (
+          <span key={`${project.title}-${signal}`}>{signal}</span>
+        ))}
+      </div>
+    </div>
   </div>
 );
 

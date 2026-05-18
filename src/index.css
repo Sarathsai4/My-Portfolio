@@ -76,6 +76,229 @@ body {
   @apply rounded-lg;
 }
 
+.analyst-project-card {
+  @apply relative overflow-hidden border border-white/10 bg-primary/80 p-5 transition duration-300;
+  transform-style: preserve-3d;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 22px 46px rgba(0, 0, 0, 0.28);
+}
+
+.analyst-project-card::before {
+  content: "";
+  @apply pointer-events-none absolute inset-0 opacity-0 transition duration-300;
+  background:
+    radial-gradient(circle at 18% 10%, color-mix(in srgb, var(--project-accent) 26%, transparent), transparent 34%),
+    linear-gradient(135deg, color-mix(in srgb, var(--project-accent) 10%, transparent), transparent 48%);
+}
+
+.analyst-project-card:hover,
+.analyst-project-card:focus-within {
+  transform: perspective(900px) rotateX(2deg) rotateY(-2deg) translateY(-0.35rem);
+  border-color: color-mix(in srgb, var(--project-accent) 48%, rgba(255, 255, 255, 0.16));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 0 34px color-mix(in srgb, var(--project-accent) 22%, transparent),
+    0 28px 70px rgba(0, 0, 0, 0.38);
+}
+
+.analyst-project-card:hover::before,
+.analyst-project-card:focus-within::before {
+  opacity: 1;
+}
+
+.analyst-project-card > * {
+  @apply relative;
+}
+
+.analyst-project-visual {
+  @apply relative mb-5 min-h-44 overflow-hidden rounded-lg border border-white/10 bg-midnight/70;
+  transform: translateZ(28px);
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+    radial-gradient(circle at 20% 30%, color-mix(in srgb, var(--project-accent) 24%, transparent), transparent 34%),
+    linear-gradient(135deg, rgba(3, 4, 18, 0.88), rgba(22, 26, 49, 0.7));
+  background-size: 3rem 3rem, 3rem 3rem, 100% 100%, 100% 100%;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    inset 0 -34px 80px rgba(3, 4, 18, 0.58),
+    0 0 24px color-mix(in srgb, var(--project-accent) 15%, transparent);
+}
+
+.analyst-project-orbit {
+  @apply absolute rounded-full border border-white/12;
+  width: 10rem;
+  height: 10rem;
+  right: -2.5rem;
+  top: -3.25rem;
+  border-color: color-mix(in srgb, var(--project-accent) 42%, rgba(255, 255, 255, 0.14));
+  box-shadow: 0 0 34px color-mix(in srgb, var(--project-accent) 24%, transparent);
+  animation: analyst-orbit-drift 12s ease-in-out infinite alternate;
+}
+
+.analyst-project-orbit::before,
+.analyst-project-orbit::after {
+  content: "";
+  @apply absolute rounded-full;
+  background: var(--project-accent);
+  box-shadow: 0 0 18px color-mix(in srgb, var(--project-accent) 72%, transparent);
+}
+
+.analyst-project-orbit::before {
+  width: 0.65rem;
+  height: 0.65rem;
+  left: 1rem;
+  top: 1.4rem;
+}
+
+.analyst-project-orbit::after {
+  width: 0.45rem;
+  height: 0.45rem;
+  right: 1.4rem;
+  bottom: 1.6rem;
+}
+
+.analyst-project-scan {
+  @apply absolute inset-x-0 top-0 h-px;
+  background: linear-gradient(90deg, transparent, var(--project-accent), transparent);
+  box-shadow: 0 0 24px color-mix(in srgb, var(--project-accent) 58%, transparent);
+  animation: analyst-scanline 4.8s ease-in-out infinite;
+}
+
+.analyst-project-dashboard {
+  @apply absolute inset-4 flex flex-col justify-between;
+}
+
+.analyst-project-metric {
+  @apply w-fit rounded-md border border-white/10 bg-primary/55 px-3 py-2 backdrop-blur-md;
+  box-shadow: 0 0 22px color-mix(in srgb, var(--project-accent) 14%, transparent);
+}
+
+.analyst-project-metric span {
+  @apply block text-[0.62rem] font-semibold uppercase tracking-[0.22em] text-white/48;
+}
+
+.analyst-project-metric strong {
+  @apply mt-1 block text-base font-semibold text-white;
+}
+
+.analyst-project-bars {
+  @apply absolute bottom-12 left-3 flex h-20 items-end gap-2;
+}
+
+.analyst-project-bars span {
+  @apply block w-3 rounded-t-sm;
+  height: var(--bar-height, 42%);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--project-accent) 92%, white), color-mix(in srgb, var(--project-accent) 54%, transparent));
+  box-shadow: 0 0 18px color-mix(in srgb, var(--project-accent) 32%, transparent);
+  animation: analyst-bar-pulse 2.9s ease-in-out infinite alternate;
+}
+
+.analyst-project-bars span:nth-child(1) {
+  --bar-height: 38%;
+  animation-delay: 0s;
+}
+
+.analyst-project-bars span:nth-child(2) {
+  --bar-height: 68%;
+  animation-delay: 0.18s;
+}
+
+.analyst-project-bars span:nth-child(3) {
+  --bar-height: 52%;
+  animation-delay: 0.36s;
+}
+
+.analyst-project-bars span:nth-child(4) {
+  --bar-height: 82%;
+  animation-delay: 0.54s;
+}
+
+.analyst-project-bars span:nth-child(5) {
+  --bar-height: 61%;
+  animation-delay: 0.72s;
+}
+
+.analyst-project-flow {
+  @apply absolute bottom-3 right-3 grid max-w-[72%] grid-cols-2 gap-2;
+}
+
+.analyst-project-flow span {
+  @apply rounded-full border border-white/10 bg-white/8 px-2.5 py-1 text-[0.64rem] font-medium text-white/70 backdrop-blur-sm;
+  border-color: color-mix(in srgb, var(--project-accent) 28%, rgba(255, 255, 255, 0.1));
+  animation: analyst-chip-float 4.6s ease-in-out infinite alternate;
+}
+
+.analyst-project-flow span:nth-child(2),
+.analyst-project-flow span:nth-child(4) {
+  animation-delay: 0.75s;
+}
+
+.analyst-project-visual-engagement .analyst-project-bars span:nth-child(1) {
+  --bar-height: 74%;
+}
+
+.analyst-project-visual-engagement .analyst-project-bars span:nth-child(2) {
+  --bar-height: 56%;
+}
+
+.analyst-project-visual-engagement .analyst-project-bars span:nth-child(3) {
+  --bar-height: 86%;
+}
+
+.analyst-project-visual-governance .analyst-project-flow span {
+  border-radius: 0.35rem;
+}
+
+.analyst-project-visual-monitoring .analyst-project-scan {
+  animation-duration: 2.8s;
+}
+
+@keyframes analyst-orbit-drift {
+  from {
+    transform: translate3d(-0.4rem, 0.2rem, 0) rotate(-8deg);
+  }
+  to {
+    transform: translate3d(0.4rem, -0.3rem, 0) rotate(8deg);
+  }
+}
+
+@keyframes analyst-scanline {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  18%,
+  78% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(11rem);
+    opacity: 0;
+  }
+}
+
+@keyframes analyst-bar-pulse {
+  from {
+    transform: scaleY(0.84);
+    opacity: 0.68;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes analyst-chip-float {
+  from {
+    transform: translate3d(-0.15rem, 0, 0);
+  }
+  to {
+    transform: translate3d(0.15rem, -0.18rem, 0);
+  }
+}
+
 .role-hero {
   @apply min-h-[70vh] flex items-center;
 }
