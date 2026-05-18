@@ -78,19 +78,24 @@ body {
 
 .engineer-case-study {
   @apply relative mt-8 overflow-hidden border border-white/10 bg-primary/80 p-5 md:p-7;
-  transform-style: preserve-3d;
+  contain: layout paint;
+  transform: translateZ(0);
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease;
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.07),
-    0 28px 72px rgba(0, 0, 0, 0.34);
+    0 18px 46px rgba(0, 0, 0, 0.3);
 }
 
 .engineer-case-study:hover {
-  transform: perspective(1100px) rotateX(1.2deg) rotateY(-1.2deg) translateY(-0.35rem);
+  transform: translate3d(0, -0.28rem, 0);
   border-color: rgba(255, 122, 51, 0.38);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.11),
-    0 0 44px rgba(255, 122, 51, 0.18),
-    0 34px 82px rgba(0, 0, 0, 0.42);
+    0 0 28px rgba(255, 122, 51, 0.12),
+    0 22px 54px rgba(0, 0, 0, 0.36);
 }
 
 .engineer-case-glow {
@@ -113,27 +118,27 @@ body {
 
 .engineer-pipeline-visual {
   @apply relative min-h-[30rem] overflow-hidden rounded-xl border border-white/10 bg-midnight/75;
-  transform: translateZ(34px);
+  contain: layout paint;
+  transform: translateZ(0);
   background:
     linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px),
-    radial-gradient(circle at 22% 18%, rgba(255, 122, 51, 0.2), transparent 30%),
-    radial-gradient(circle at 82% 78%, rgba(51, 194, 204, 0.16), transparent 32%),
+    radial-gradient(circle at 22% 18%, rgba(255, 122, 51, 0.16), transparent 30%),
+    radial-gradient(circle at 82% 78%, rgba(51, 194, 204, 0.12), transparent 32%),
     linear-gradient(135deg, rgba(3, 4, 18, 0.92), rgba(22, 26, 49, 0.76));
   background-size: 3.75rem 3.75rem, 3.75rem 3.75rem, 100% 100%, 100% 100%, 100% 100%;
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.07),
-    inset 0 -44px 96px rgba(3, 4, 18, 0.68),
-    0 0 30px rgba(255, 122, 51, 0.13);
+    inset 0 -30px 64px rgba(3, 4, 18, 0.58),
+    0 0 18px rgba(255, 122, 51, 0.08);
 }
 
 .engineer-pipeline-grid {
-  @apply absolute inset-0 opacity-55;
+  @apply absolute inset-0 opacity-28;
   background:
-    repeating-linear-gradient(115deg, transparent 0 5rem, rgba(255, 122, 51, 0.17) 5rem 5.06rem, transparent 5.06rem 9rem),
-    repeating-linear-gradient(65deg, transparent 0 6rem, rgba(51, 194, 204, 0.13) 6rem 6.06rem, transparent 6.06rem 10rem);
+    repeating-linear-gradient(115deg, transparent 0 5rem, rgba(255, 122, 51, 0.14) 5rem 5.04rem, transparent 5.04rem 9rem),
+    repeating-linear-gradient(65deg, transparent 0 6rem, rgba(51, 194, 204, 0.1) 6rem 6.04rem, transparent 6.04rem 10rem);
   background-size: 180% 180%;
-  animation: engineer-grid-flow 18s linear infinite;
 }
 
 .engineer-pipeline-orbit {
@@ -144,9 +149,8 @@ body {
   top: -4.5rem;
   border-color: rgba(255, 122, 51, 0.28);
   box-shadow:
-    0 0 42px rgba(255, 122, 51, 0.18),
-    inset 0 0 42px rgba(51, 194, 204, 0.08);
-  animation: engineer-orbit-spin 18s linear infinite;
+    0 0 22px rgba(255, 122, 51, 0.1),
+    inset 0 0 30px rgba(51, 194, 204, 0.06);
 }
 
 .engineer-pipeline-orbit::before,
@@ -154,7 +158,7 @@ body {
   content: "";
   @apply absolute rounded-full;
   background: #ff7a33;
-  box-shadow: 0 0 22px rgba(255, 122, 51, 0.72);
+  box-shadow: 0 0 14px rgba(255, 122, 51, 0.5);
 }
 
 .engineer-pipeline-orbit::before {
@@ -175,15 +179,16 @@ body {
 .engineer-pipeline-line {
   @apply absolute left-1/2 top-10 h-[calc(100%-5rem)] w-px -translate-x-1/2;
   background: linear-gradient(180deg, transparent, rgba(255, 122, 51, 0.82), rgba(51, 194, 204, 0.7), transparent);
-  box-shadow: 0 0 28px rgba(255, 122, 51, 0.38);
+  box-shadow: 0 0 18px rgba(255, 122, 51, 0.24);
 }
 
 .engineer-pipeline-line::after {
   content: "";
   @apply absolute left-1/2 top-0 h-16 w-px -translate-x-1/2 rounded-full;
   background: linear-gradient(180deg, transparent, white, transparent);
-  box-shadow: 0 0 22px rgba(255, 255, 255, 0.8);
-  animation: engineer-pipeline-pulse 4s ease-in-out infinite;
+  box-shadow: 0 0 14px rgba(255, 255, 255, 0.58);
+  animation: engineer-pipeline-pulse 5.8s ease-in-out infinite;
+  will-change: transform, opacity;
 }
 
 .engineer-pipeline-nodes {
@@ -191,11 +196,10 @@ body {
 }
 
 .engineer-pipeline-node {
-  @apply flex items-center gap-3 rounded-lg border border-white/10 bg-primary/62 px-3 py-2 text-left backdrop-blur-md;
-  animation: engineer-node-float 5s ease-in-out calc(var(--node-index) * 0.16s) infinite alternate;
+  @apply flex items-center gap-3 rounded-lg border border-white/10 bg-primary/72 px-3 py-2 text-left;
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.07),
-    0 0 22px rgba(255, 122, 51, 0.08);
+    0 8px 22px rgba(0, 0, 0, 0.14);
 }
 
 .engineer-pipeline-node:nth-child(even) {
@@ -212,7 +216,7 @@ body {
   @apply flex size-8 shrink-0 items-center justify-center rounded-full text-xs font-bold;
   background: linear-gradient(135deg, rgba(255, 122, 51, 0.32), rgba(51, 194, 204, 0.18));
   color: white;
-  box-shadow: 0 0 20px rgba(255, 122, 51, 0.26);
+  box-shadow: 0 0 12px rgba(255, 122, 51, 0.18);
 }
 
 .engineer-pipeline-node strong {
@@ -220,10 +224,10 @@ body {
 }
 
 .engineer-info-panel {
-  @apply rounded-lg border border-white/10 bg-midnight/58 p-4 backdrop-blur-md;
+  @apply rounded-lg border border-white/10 bg-midnight/68 p-4;
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.06),
-    0 18px 42px rgba(0, 0, 0, 0.2);
+    0 12px 28px rgba(0, 0, 0, 0.18);
 }
 
 .engineer-info-panel h4 {
@@ -237,25 +241,7 @@ body {
 .engineer-info-chip:hover {
   border-color: rgba(255, 122, 51, 0.42);
   color: white;
-  box-shadow: 0 0 18px rgba(255, 122, 51, 0.14);
-}
-
-@keyframes engineer-grid-flow {
-  from {
-    background-position: 0% 50%, 100% 50%;
-  }
-  to {
-    background-position: 100% 50%, 0% 50%;
-  }
-}
-
-@keyframes engineer-orbit-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  box-shadow: 0 0 12px rgba(255, 122, 51, 0.1);
 }
 
 @keyframes engineer-pipeline-pulse {
@@ -270,15 +256,6 @@ body {
   to {
     transform: translate3d(-50%, 22rem, 0);
     opacity: 0;
-  }
-}
-
-@keyframes engineer-node-float {
-  from {
-    transform: translate3d(-0.2rem, -0.08rem, 0);
-  }
-  to {
-    transform: translate3d(0.2rem, 0.12rem, 0);
   }
 }
 
