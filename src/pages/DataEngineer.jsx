@@ -27,6 +27,84 @@ const engineeringProjects = [
   "Inventory Forecasting & Optimization Data Pipeline",
 ];
 
+const streamingCaseStudy = {
+  title: "Streaming User Behavior Data Pipeline & Analytics Platform",
+  category: "Data Engineering, Digital Analytics, Cloud Data Pipeline",
+  role: "Data Engineer / Analytics Engineer",
+  stack: [
+    "Python",
+    "SQL",
+    "BigQuery",
+    "Google Cloud Storage",
+    "Airflow",
+    "Pandas",
+    "Jupyter Notebook",
+    "Tableau",
+    "Looker",
+    "Git",
+    "Docker",
+    "Matplotlib",
+  ],
+  overview:
+    "Designed an end-to-end data engineering and analytics platform for streaming-style digital traffic and user behavior data. The project turns raw event-level activity into clean, analytics-ready BigQuery datasets for engagement analysis, retention tracking, churn-risk monitoring, content consumption insights, platform usage, and executive reporting.",
+  businessProblem:
+    "Raw streaming event data is often duplicated, inconsistent, incomplete, and difficult for BI, product, marketing, and leadership teams to use directly. This platform standardizes ingestion, models trusted analytical tables, and creates dashboard-ready data products for lifecycle and content analytics.",
+  pipelineStages: [
+    "Raw data ingestion",
+    "Data cleaning and standardization",
+    "Event-level transformation",
+    "Session-level aggregation",
+    "User-level feature creation",
+    "Retention and churn tables",
+    "BI dashboard layer",
+  ],
+  modeledTables: [
+    "dim_users",
+    "dim_content",
+    "dim_device",
+    "fact_user_events",
+    "fact_sessions",
+    "daily_user_engagement",
+    "weekly_retention_cohorts",
+    "content_performance_summary",
+    "churn_risk_features",
+    "marketing_channel_performance",
+  ],
+  dashboards: [
+    "User Engagement Overview",
+    "Retention and Churn Analysis",
+    "Content Consumption Insights",
+    "Marketing Channel Performance",
+    "Data Quality Monitoring",
+  ],
+  qualityChecks: [
+    "Null checks on user_id, session_id, and event_timestamp",
+    "Duplicate event detection",
+    "Watch duration range validation",
+    "Timestamp consistency checks",
+    "Daily row count reconciliation",
+    "Schema drift detection",
+    "Subscription status validation",
+    "Pipeline freshness checks",
+  ],
+  metrics: [
+    "Daily Active Users",
+    "Weekly Active Users",
+    "Average Watch Duration",
+    "Sessions per User",
+    "Content Completion Rate",
+    "7-Day Retention Rate",
+    "30-Day Retention Rate",
+    "Churn Risk Score",
+  ],
+  questions: [
+    "Which users are becoming inactive over time?",
+    "Which content categories drive repeat engagement?",
+    "Which channels bring users with stronger retention?",
+    "Which user behaviors indicate churn risk?",
+  ],
+};
+
 const DataEngineer = () => {
   return (
     <main className="relative isolate overflow-hidden pt-28 c-space role-page role-page-engineer">
@@ -69,6 +147,11 @@ const DataEngineer = () => {
 
       <section className="relative z-10 mt-20">
         <h2 className="text-heading">Relevant Engineering Work</h2>
+        <p className="max-w-3xl mt-4 subtext">
+          The featured case study below shows the full engineering path: ingestion, cloud storage,
+          orchestration, BigQuery modeling, quality validation, and BI-ready data products.
+        </p>
+        <FeaturedEngineeringCaseStudy project={streamingCaseStudy} />
         <div className="grid grid-cols-1 gap-4 mt-8 md:grid-cols-2">
           {engineeringProjects.map((project) => (
             <div className="p-5 border role-card border-white/10 bg-primary" key={project}>
@@ -101,6 +184,80 @@ const SkillMatrix = ({ groups }) => (
       </article>
     ))}
   </div>
+);
+
+const FeaturedEngineeringCaseStudy = ({ project }) => (
+  <article className="engineer-case-study role-card">
+    <div className="engineer-case-glow" />
+    <div className="grid gap-8 lg:grid-cols-[1.08fr_0.92fr]">
+      <div>
+        <p className="text-sm uppercase tracking-[0.28em] text-orange-300">Featured Case Study</p>
+        <h3 className="mt-4 text-3xl font-semibold text-white md:text-4xl">{project.title}</h3>
+        <div className="mt-5 grid gap-3 text-sm text-white/72 sm:grid-cols-2">
+          <p className="rounded-lg border border-white/10 bg-white/6 px-3 py-2">
+            <span className="block text-white/42">Category</span>
+            {project.category}
+          </p>
+          <p className="rounded-lg border border-white/10 bg-white/6 px-3 py-2">
+            <span className="block text-white/42">Role</span>
+            {project.role}
+          </p>
+        </div>
+        <p className="mt-6 subtext">{project.overview}</p>
+        <p className="mt-4 subtext">{project.businessProblem}</p>
+
+        <div className="flex flex-wrap gap-2 mt-6">
+          {project.stack.map((item) => (
+            <span className="skill-pill engineer-skill-pill" key={item}>
+              {item}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <EngineeringPipelineVisual stages={project.pipelineStages} />
+    </div>
+
+    <div className="grid gap-4 mt-8 lg:grid-cols-3">
+      <InfoPanel title="BigQuery Data Model" items={project.modeledTables} />
+      <InfoPanel title="Dashboard Pages" items={project.dashboards} />
+      <InfoPanel title="Data Quality Checks" items={project.qualityChecks} />
+    </div>
+
+    <div className="grid gap-4 mt-4 lg:grid-cols-2">
+      <InfoPanel title="Business Questions Answered" items={project.questions} />
+      <InfoPanel title="Sample Metrics Created" items={project.metrics} />
+    </div>
+  </article>
+);
+
+const EngineeringPipelineVisual = ({ stages }) => (
+  <div className="engineer-pipeline-visual" aria-label="Streaming user behavior pipeline architecture">
+    <div className="engineer-pipeline-orbit" />
+    <div className="engineer-pipeline-grid" />
+    <div className="engineer-pipeline-line" />
+    <div className="engineer-pipeline-nodes">
+      {stages.map((stage, index) => (
+        <div className="engineer-pipeline-node" key={stage} style={{ "--node-index": index }}>
+          <span>{String(index + 1).padStart(2, "0")}</span>
+          <strong>{stage}</strong>
+        </div>
+      ))}
+    </div>
+  </div>
+);
+
+const InfoPanel = ({ title, items }) => (
+  <section className="engineer-info-panel">
+    <h4>{title}</h4>
+    <div className="mt-4 flex flex-wrap gap-2">
+      {items.map((item) => (
+        <span className="engineer-info-chip" key={`${title}-${item}`}>
+          {item}
+        </span>
+      ))}
+    </div>
+  </section>
 );
 
 const LogoWall = () => (
