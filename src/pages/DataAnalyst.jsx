@@ -229,7 +229,7 @@ const DataAnalyst = () => {
       <section className="relative z-10 mt-20">
         <h2 className="text-heading">Analyst Toolkit</h2>
         <p className="max-w-3xl mt-4 subtext">
-          Coverage includes every analyst-facing skill from the resume, from BI and customer analytics to governance,
+          Coverage includes analyst-facing capabilities across BI, customer analytics, governance,
           privacy-aware reporting, metric definitions, and advanced SQL analysis.
         </p>
         <SkillMatrix groups={skillGroups} />
