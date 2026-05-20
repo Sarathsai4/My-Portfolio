@@ -71,6 +71,117 @@ const analystProjects = [
   },
 ];
 
+const operationsSkills = [
+  "Remote Production Support",
+  "Event Logistics",
+  "Production Documentation",
+  "Scheduling Coordination",
+  "Task Tracking",
+  "Meeting Coordination",
+  "Vendor Follow-Up",
+  "Stakeholder Communication",
+  "Production Material Tracking",
+  "Operational Reporting",
+  "Process Documentation",
+  "Cross-Functional Coordination",
+];
+
+const operationsTools = [
+  "Excel",
+  "Outlook",
+  "Word",
+  "PowerPoint",
+  "Teams",
+  "Power BI",
+  "SharePoint",
+  "OneDrive",
+  "Google Sheets",
+  "Power Query",
+];
+
+const operationsProjects = [
+  {
+    title: "Remote Production Operations Tracker for Event Coordination",
+    tools: ["Excel", "Google Sheets", "Power BI", "Outlook", "Teams", "PowerPoint"],
+    accent: "#ff7a33",
+    label: "Event Ops",
+    status: "Priority visibility",
+    summary:
+      "Designed a production operations tracking system to organize event logistics, staff schedules, documentation, vendor follow-ups, and task ownership across remote and event-based workflows.",
+    bullets: [
+      "Created structured trackers for event schedules, staff assignments, transportation needs, vendor follow-ups, production materials, and task status.",
+      "Built summary views for pending items, high-priority tasks, upcoming deadlines, responsible owners, dependencies, and notes.",
+      "Standardized recurring updates, meeting notes, task handoffs, and production checklists for clearer team coordination.",
+    ],
+    outcome:
+      "Improved visibility into pending production tasks and helped teams coordinate faster across internal groups and external stakeholders.",
+  },
+  {
+    title: "Event Logistics and Scheduling Coordination Dashboard",
+    tools: ["Excel", "Power BI", "Power Query", "Outlook Calendar", "Teams"],
+    accent: "#33c2cc",
+    label: "Schedule",
+    status: "Conflict tracking",
+    summary:
+      "Developed a scheduling and logistics dashboard to track event timelines, staff availability, task assignments, transportation needs, and operational dependencies.",
+    bullets: [
+      "Built a centralized event schedule tracker with fields for owner, time window, priority, resource requirement, and status.",
+      "Used Excel formulas and Power Query to clean, organize, and summarize event and task data.",
+      "Created Power BI views for upcoming deadlines, incomplete tasks, staffing coverage, task distribution, and filters by owner or priority.",
+    ],
+    outcome:
+      "Made logistics information easier to monitor from one place and supported faster planning in a fast-moving environment.",
+  },
+  {
+    title: "Production Documentation and Communication Workflow System",
+    tools: ["Word", "PowerPoint", "Excel", "Outlook", "Teams", "OneDrive"],
+    accent: "#57db96",
+    label: "Docs",
+    status: "Clear handoffs",
+    summary:
+      "Created a structured documentation workflow for recurring operational updates, meeting coordination, action items, task handoffs, and stakeholder communication.",
+    bullets: [
+      "Developed reusable templates for production notes, meeting agendas, follow-up emails, action items, and status reports.",
+      "Organized documents by project and event category so production information could be retrieved and distributed quickly.",
+      "Created daily and weekly update formats covering completed tasks, blockers, next steps, ownership, and follow-up dates.",
+    ],
+    outcome:
+      "Reduced confusion by standardizing how updates were captured and shared across internal teams and stakeholders.",
+  },
+  {
+    title: "Production Materials Management and Distribution Tracker",
+    tools: ["Excel", "SharePoint", "OneDrive", "Power BI", "Outlook", "Teams"],
+    accent: "#d6995c",
+    label: "Assets",
+    status: "Approval flow",
+    summary:
+      "Built a tracking system to manage production-related materials such as graphics requests, promotional assets, sales content, documentation, and approval status.",
+    bullets: [
+      "Tracked asset name, category, owner, request date, due date, status, approval notes, and stakeholder deliverables.",
+      "Organized materials into graphics, promotional content, reports, documentation, and stakeholder-ready outputs.",
+      "Created status summaries for pending approvals, completed materials, delayed items, and owner-specific tasks.",
+    ],
+    outcome:
+      "Improved accountability by making asset readiness, ownership, and due dates easier to review and follow up on.",
+  },
+  {
+    title: "Remote Team Coordination and Task Automation Workflow",
+    tools: ["Outlook", "Excel", "Power Automate", "Teams", "Power BI"],
+    accent: "#7a57db",
+    label: "Automation",
+    status: "Follow-up control",
+    summary:
+      "Designed a workflow to support high-volume remote coordination by organizing emails, task requests, follow-ups, approvals, and stakeholder updates.",
+    bullets: [
+      "Created structured templates for recurring email responses, meeting follow-ups, task summaries, and status updates.",
+      "Built trackers for requests, pending approvals, follow-up dates, stakeholder ownership, priority, and completion status.",
+      "Used automation logic to classify tasks and produce dashboard-style summaries for open requests, overdue items, and completed actions.",
+    ],
+    outcome:
+      "Reduced manual tracking effort and improved response consistency for remote coordination and operational follow-through.",
+  },
+];
+
 const DataAnalyst = () => {
   return (
     <main className="relative isolate overflow-hidden pt-28 c-space role-page role-page-analyst">
@@ -100,6 +211,19 @@ const DataAnalyst = () => {
             <p className="mt-3 subtext">{item.text}</p>
           </article>
         ))}
+      </section>
+
+      <section className="relative z-10 mt-12">
+        <div className="operations-bridge role-card">
+          <p className="text-sm uppercase tracking-[0.3em] text-orange-300">Operations Alignment</p>
+          <p className="mt-4 text-lg leading-8 text-white/78">
+            In addition to data analytics and dashboard development, I have worked on operations-focused projects
+            involving task coordination, documentation management, communication workflows, scheduling trackers,
+            reporting templates, and cross-functional follow-up systems. These projects strengthened my ability to
+            organize information flow, support fast-moving teams, manage deadlines, and communicate clearly across
+            stakeholders in remote and event-driven environments.
+          </p>
+        </div>
       </section>
 
       <section className="relative z-10 mt-20">
@@ -137,6 +261,49 @@ const DataAnalyst = () => {
               <p className="mt-4 text-sm leading-6 text-aqua/90">{project.impact}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="relative z-10 mt-20">
+        <h2 className="text-heading">Operations, Production Support & Workflow Coordination Projects</h2>
+        <p className="max-w-3xl mt-4 subtext">
+          These projects extend the analyst toolkit into operational coordination: tracking deadlines, organizing
+          production-style materials, documenting handoffs, improving follow-up loops, and creating clear reporting
+          views for busy teams.
+        </p>
+
+        <div className="mt-8 grid grid-cols-1 gap-4 lg:grid-cols-2">
+          {operationsProjects.map((project) => (
+            <article
+              className="ops-project-card role-card"
+              key={project.title}
+              style={{ "--ops-accent": project.accent }}
+            >
+              <OperationsProjectVisual project={project} />
+              <p className="text-lg font-semibold text-white">{project.title}</p>
+              <div className="flex flex-wrap gap-2 mt-4">
+                {project.tools.map((tool) => (
+                  <span className="skill-pill ops-tool-pill" key={`${project.title}-${tool}`}>
+                    {tool}
+                  </span>
+                ))}
+              </div>
+              <p className="mt-5 subtext">{project.summary}</p>
+              <ul className="mt-5 space-y-3">
+                {project.bullets.map((bullet) => (
+                  <li className="ops-bullet" key={bullet}>
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-5 text-sm leading-6 text-orange-200/90">{project.outcome}</p>
+            </article>
+          ))}
+        </div>
+
+        <div className="mt-8 grid grid-cols-1 gap-4 lg:grid-cols-[1.25fr_0.75fr]">
+          <InfoPillPanel title="Production & Operations Coordination" items={operationsSkills} />
+          <InfoPillPanel title="Tools" items={operationsTools} />
         </div>
       </section>
 
@@ -186,6 +353,39 @@ const AnalystProjectVisual = ({ project }) => (
           <span key={`${project.title}-${signal}`}>{signal}</span>
         ))}
       </div>
+    </div>
+  </div>
+);
+
+const OperationsProjectVisual = ({ project }) => (
+  <div className="ops-project-visual" aria-hidden="true">
+    <div className="ops-visual-header">
+      <span>{project.label}</span>
+      <strong>{project.status}</strong>
+    </div>
+    <div className="ops-visual-board">
+      <span className="ops-row is-hot" />
+      <span className="ops-row" />
+      <span className="ops-row is-done" />
+      <span className="ops-row" />
+    </div>
+    <div className="ops-visual-footer">
+      <span>Owner</span>
+      <span>Due</span>
+      <span>Status</span>
+    </div>
+  </div>
+);
+
+const InfoPillPanel = ({ title, items }) => (
+  <div className="ops-info-panel role-card">
+    <h3 className="text-xl font-semibold text-white">{title}</h3>
+    <div className="flex flex-wrap gap-2 mt-4">
+      {items.map((item) => (
+        <span className="ops-info-pill" key={`${title}-${item}`}>
+          {item}
+        </span>
+      ))}
     </div>
   </div>
 );
