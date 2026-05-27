@@ -1403,6 +1403,12 @@ body {
     linear-gradient(64deg, transparent 0 24%, rgba(255, 105, 75, 0.09) 24% 24.35%, transparent 24.35% 70%, rgba(122, 87, 219, 0.1) 70% 70.35%, transparent 70.35%);
 }
 
+.role-tech-ai .role-tech-aurora {
+  background:
+    linear-gradient(115deg, transparent 0 16%, rgba(255, 122, 51, 0.1) 16% 16.4%, transparent 16.4% 50%, rgba(51, 194, 204, 0.12) 50% 50.4%, transparent 50.4%),
+    linear-gradient(64deg, transparent 0 24%, rgba(87, 219, 150, 0.08) 24% 24.35%, transparent 24.35% 70%, rgba(214, 153, 92, 0.08) 70% 70.35%, transparent 70.35%);
+}
+
 .role-tech-grid {
   opacity: 0.34;
   background-image:
@@ -1430,6 +1436,11 @@ body {
 .role-tech-engineer .role-tech-streams span {
   background: linear-gradient(90deg, transparent, rgba(255, 122, 51, 0.78), rgba(51, 194, 204, 0.58), transparent);
   box-shadow: 0 0 24px rgba(255, 122, 51, 0.28);
+}
+
+.role-tech-ai .role-tech-streams span {
+  background: linear-gradient(90deg, transparent, rgba(255, 122, 51, 0.72), rgba(51, 194, 204, 0.58), transparent);
+  box-shadow: 0 0 24px rgba(255, 122, 51, 0.24);
 }
 
 .role-tech-streams span:nth-child(1) {
@@ -1466,6 +1477,12 @@ body {
   background:
     radial-gradient(circle at var(--cursor-x) var(--cursor-y), rgba(255, 122, 51, 0.16), transparent 18rem),
     radial-gradient(circle at var(--cursor-x) var(--cursor-y), rgba(51, 194, 204, 0.1), transparent 7rem);
+}
+
+.role-tech-ai .role-tech-cursor {
+  background:
+    radial-gradient(circle at var(--cursor-x) var(--cursor-y), rgba(255, 122, 51, 0.14), transparent 18rem),
+    radial-gradient(circle at var(--cursor-x) var(--cursor-y), rgba(51, 194, 204, 0.11), transparent 7rem);
 }
 
 .role-tech-token {
@@ -1740,6 +1757,228 @@ body {
 
 .data-stack-tooltip > span {
   @apply relative;
+}
+
+.role-page-ai::before {
+  background:
+    radial-gradient(circle at 18% 15%, rgba(255, 122, 51, 0.13), transparent 32%),
+    radial-gradient(circle at 76% 18%, rgba(51, 194, 204, 0.14), transparent 30%),
+    radial-gradient(circle at 58% 72%, rgba(87, 219, 150, 0.08), transparent 34%),
+    linear-gradient(180deg, rgba(3, 4, 18, 0.9), #030412 56%);
+}
+
+.cx-analytics-bridge,
+.ai-methodology-frame,
+.ai-stack-wall {
+  @apply relative overflow-hidden border border-white/10 bg-primary/78 p-5 md:p-7;
+  contain: layout paint;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.07),
+    0 20px 56px rgba(0, 0, 0, 0.28);
+}
+
+.cx-analytics-bridge::before,
+.ai-methodology-frame::before,
+.ai-stack-wall::before {
+  content: "";
+  @apply pointer-events-none absolute inset-0;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(255, 122, 51, 0.16), transparent 28%),
+    radial-gradient(circle at 86% 18%, rgba(51, 194, 204, 0.12), transparent 30%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.05), transparent 50%);
+}
+
+.cx-analytics-bridge > *,
+.ai-methodology-frame > *,
+.ai-stack-wall > * {
+  @apply relative;
+}
+
+.cx-bridge-card,
+.ai-capability-card,
+.ai-project-card {
+  @apply relative overflow-hidden border border-white/10 bg-primary/80 p-5 transition duration-300;
+  contain: layout paint;
+  transform: translateZ(0);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 16px 40px rgba(0, 0, 0, 0.24);
+}
+
+.cx-bridge-card::before,
+.ai-capability-card::before,
+.ai-project-card::before {
+  content: "";
+  @apply pointer-events-none absolute inset-0 opacity-0 transition duration-300;
+  background:
+    radial-gradient(circle at 18% 10%, rgba(255, 122, 51, 0.12), transparent 30%),
+    radial-gradient(circle at 88% 16%, rgba(51, 194, 204, 0.1), transparent 28%),
+    linear-gradient(135deg, color-mix(in srgb, var(--ai-accent, #33c2cc) 11%, transparent), transparent 54%);
+}
+
+.cx-bridge-card:hover,
+.cx-bridge-card:focus-within,
+.ai-capability-card:hover,
+.ai-capability-card:focus-within,
+.ai-project-card:hover,
+.ai-project-card:focus-within {
+  transform: translate3d(0, -0.28rem, 0);
+  border-color: color-mix(in srgb, var(--ai-accent, #ff7a33) 44%, rgba(255, 255, 255, 0.16));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.11),
+    0 0 24px color-mix(in srgb, var(--ai-accent, #33c2cc) 15%, transparent),
+    0 22px 52px rgba(0, 0, 0, 0.34);
+}
+
+.cx-bridge-card:hover::before,
+.cx-bridge-card:focus-within::before,
+.ai-capability-card:hover::before,
+.ai-capability-card:focus-within::before,
+.ai-project-card:hover::before,
+.ai-project-card:focus-within::before {
+  opacity: 1;
+}
+
+.cx-bridge-card > *,
+.ai-capability-card > *,
+.ai-project-card > * {
+  @apply relative;
+}
+
+.cx-bridge-pill,
+.ai-skill-pill,
+.ai-stack-token {
+  @apply inline-flex items-center rounded-full border border-white/10 bg-white/7 px-3 py-1.5 text-sm font-medium text-white/72 transition duration-200;
+}
+
+.cx-bridge-pill:hover,
+.ai-skill-pill:hover,
+.ai-stack-token:hover {
+  @apply text-white;
+  border-color: rgba(255, 122, 51, 0.45);
+  background: rgba(255, 122, 51, 0.1);
+  box-shadow: 0 0 18px rgba(255, 122, 51, 0.16);
+}
+
+.ai-methodology-frame {
+  @apply grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start;
+}
+
+.ai-methodology-steps {
+  @apply grid gap-3;
+}
+
+.ai-methodology-step {
+  @apply flex items-center gap-4 rounded-lg border border-white/10 bg-midnight/70 px-4 py-3 text-white/82;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.ai-methodology-step span {
+  @apply flex size-10 shrink-0 items-center justify-center rounded-full text-sm font-semibold text-white;
+  background: linear-gradient(135deg, rgba(255, 122, 51, 0.5), rgba(51, 194, 204, 0.34));
+  box-shadow: 0 0 22px rgba(255, 122, 51, 0.18);
+}
+
+.ai-methodology-step strong {
+  @apply text-sm font-semibold md:text-base;
+}
+
+.ai-project-visual {
+  @apply relative mb-5 overflow-hidden rounded-lg border border-white/10 bg-midnight/75 p-4;
+  min-height: 12rem;
+  background:
+    radial-gradient(circle at 25% 24%, color-mix(in srgb, var(--ai-accent) 28%, transparent), transparent 30%),
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(135deg, rgba(3, 4, 18, 0.94), rgba(22, 26, 49, 0.76));
+  background-size: 100% 100%, 2.8rem 2.8rem, 2.8rem 2.8rem, 100% 100%;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    inset 0 -28px 58px rgba(3, 4, 18, 0.62);
+}
+
+.ai-project-visual::after {
+  content: "";
+  @apply absolute inset-y-0 w-20 opacity-0 transition duration-300;
+  left: -5rem;
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--ai-accent) 30%, transparent), transparent);
+  transform: skewX(-18deg);
+}
+
+.ai-project-card:hover .ai-project-visual::after,
+.ai-project-card:focus-within .ai-project-visual::after {
+  opacity: 1;
+  left: calc(100% + 2rem);
+  transition-duration: 660ms;
+}
+
+.ai-project-orbit {
+  @apply absolute left-6 top-6 size-24 rounded-full border border-white/10;
+  box-shadow:
+    0 0 0 0.7rem color-mix(in srgb, var(--ai-accent) 10%, transparent),
+    0 0 36px color-mix(in srgb, var(--ai-accent) 26%, transparent);
+}
+
+.ai-project-orbit::before,
+.ai-project-orbit::after {
+  content: "";
+  @apply absolute rounded-full;
+}
+
+.ai-project-orbit::before {
+  @apply size-3;
+  left: 1.1rem;
+  top: 0.65rem;
+  background: color-mix(in srgb, var(--ai-accent) 82%, white);
+  box-shadow: 0 0 18px color-mix(in srgb, var(--ai-accent) 50%, transparent);
+}
+
+.ai-project-orbit::after {
+  @apply inset-6;
+  border: 1px solid color-mix(in srgb, var(--ai-accent) 34%, rgba(255, 255, 255, 0.14));
+}
+
+.ai-project-method {
+  @apply absolute right-4 top-4 rounded-full border border-white/10 bg-primary/72 px-4 py-2 text-sm font-semibold text-white/82 backdrop-blur-md;
+  box-shadow: 0 0 24px color-mix(in srgb, var(--ai-accent) 18%, transparent);
+}
+
+.ai-project-chart {
+  @apply absolute bottom-4 left-4 right-4 flex h-16 items-end gap-2 rounded-lg border border-white/10 bg-primary/52 p-3;
+}
+
+.ai-project-chart span {
+  @apply block flex-1 rounded-t;
+  height: 42%;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--ai-accent) 72%, white), color-mix(in srgb, var(--ai-accent) 28%, transparent));
+  box-shadow: 0 0 14px color-mix(in srgb, var(--ai-accent) 18%, transparent);
+}
+
+.ai-project-chart span:nth-child(2) {
+  height: 70%;
+}
+
+.ai-project-chart span:nth-child(3) {
+  height: 52%;
+}
+
+.ai-project-chart span:nth-child(4) {
+  height: 84%;
+}
+
+.ai-method-note {
+  @apply relative pl-5 text-sm leading-6 text-white/64;
+}
+
+.ai-method-note::before {
+  content: "";
+  @apply absolute left-0 top-2 size-2 rounded-full;
+  background: color-mix(in srgb, var(--ai-accent, #33c2cc) 76%, white);
+  box-shadow: 0 0 16px color-mix(in srgb, var(--ai-accent, #33c2cc) 44%, transparent);
+}
+
+.ai-stack-wall {
+  @apply mt-8 flex flex-wrap gap-3;
 }
 
 @keyframes data-grid-drift {

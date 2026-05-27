@@ -139,7 +139,7 @@ const DataEngineer = () => {
       <section className="relative z-10 mt-20">
         <h2 className="text-heading">Engineering Stack</h2>
         <p className="max-w-3xl mt-4 subtext">
-          Coverage includes the full engineer-facing stack: programming, cloud services,
+          A focused toolkit for the full engineer-facing stack: programming, cloud services,
           orchestration, distributed compute, streaming, warehousing, quality, governance, APIs, and CI/CD.
         </p>
         <SkillMatrix groups={skillGroups} />

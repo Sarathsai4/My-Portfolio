@@ -10,6 +10,8 @@ const Footer = () => {
         <a href="#/data-analyst" className="hover:text-white">Data Analyst</a>
         <p>|</p>
         <a href="#/data-engineer" className="hover:text-white">Data Engineer</a>
+        <p>|</p>
+        <a href="#/ai-analytics" className="hover:text-white">AI / ML</a>
       </div>
       <a className="hover:text-white" href={`mailto:${contactEmail}`}>{contactEmail}</a>
       <p>&copy; 2026 Sarath Sai Grandhe. All rights reserved.</p>

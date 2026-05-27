@@ -182,6 +182,24 @@ const operationsProjects = [
   },
 ];
 
+const cxAnalyticsBridge = [
+  {
+    title: "Customer Segmentation for Marketing",
+    tags: ["Python", "Pandas", "SQL", "Clustering", "Lifecycle"],
+    text: "Segment customers by engagement, retention signals, campaign response, and support friction so marketing teams can target the right intervention instead of treating every customer journey the same.",
+  },
+  {
+    title: "Voice-of-Customer Support Intelligence",
+    tags: ["NLP", "CSAT", "NPS", "Support Tickets", "Dashboards"],
+    text: "Synthesize surveys, support tickets, chat-style feedback, and operational data into measurable themes, pain points, and self-service opportunities for CX and support teams.",
+  },
+  {
+    title: "Methodology-Defensible AI Analysis",
+    tags: ["AI QA", "Regression", "Model Checks", "Jupyter", "Storytelling"],
+    text: "Use AI to accelerate exploration while independently validating SQL, Pandas logic, model assumptions, feature definitions, and whether the output is reliable enough to defend.",
+  },
+];
+
 const DataAnalyst = () => {
   return (
     <main className="relative isolate overflow-hidden pt-28 c-space role-page role-page-analyst">
@@ -194,7 +212,7 @@ const DataAnalyst = () => {
             Basic-to-advanced analytics for trusted business decisions.
           </h1>
           <p className="max-w-3xl mt-6 text-lg text-neutral-300">
-            This page frames Sarath for data analyst roles: SQL-first analysis, BI dashboards,
+            This section positions my work for data analyst roles: SQL-first analysis, BI dashboards,
             KPI governance, customer analytics, reporting quality, and stakeholder-ready insight delivery.
           </p>
           <div className="flex flex-wrap gap-3 mt-8">
@@ -229,10 +247,44 @@ const DataAnalyst = () => {
       <section className="relative z-10 mt-20">
         <h2 className="text-heading">Analyst Toolkit</h2>
         <p className="max-w-3xl mt-4 subtext">
-          Coverage includes analyst-facing capabilities across BI, customer analytics, governance,
+          A focused toolkit for analyst-facing capabilities across BI, customer analytics, governance,
           privacy-aware reporting, metric definitions, and advanced SQL analysis.
         </p>
         <SkillMatrix groups={skillGroups} />
+      </section>
+
+      <section className="relative z-10 mt-20">
+        <div className="cx-analytics-bridge role-card">
+          <div className="max-w-3xl">
+            <p className="text-sm uppercase tracking-[0.3em] text-aqua">Customer Experience Data Science</p>
+            <h2 className="mt-4 text-3xl font-semibold text-white md:text-4xl">
+              Analyst work that connects marketing, support, and machine learning.
+            </h2>
+            <p className="mt-5 subtext">
+              This bridge expands the analyst portfolio into technical CX analytics: segmentation for marketing,
+              Voice-of-Customer analysis, support-ticket NLP, regression-based driver analysis, and AI-assisted
+              quality checks that keep the methodology explainable.
+            </p>
+            <a className="inline-flex mt-6 role-link role-link-primary" href="#/ai-analytics">
+              Open AI / CX Analytics
+            </a>
+          </div>
+          <div className="grid grid-cols-1 gap-4 mt-8 lg:grid-cols-3">
+            {cxAnalyticsBridge.map((item) => (
+              <article className="cx-bridge-card" key={item.title}>
+                <h3 className="text-xl font-semibold text-white">{item.title}</h3>
+                <p className="mt-4 text-sm leading-6 text-white/66">{item.text}</p>
+                <div className="flex flex-wrap gap-2 mt-5">
+                  {item.tags.map((tag) => (
+                    <span className="cx-bridge-pill" key={`${item.title}-${tag}`}>
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
       </section>
 
       <section className="relative z-10 mt-20">

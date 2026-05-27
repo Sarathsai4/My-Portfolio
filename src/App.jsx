@@ -12,6 +12,7 @@ const Contact = lazy(() => import("./sections/Contact"));
 const WeatherAtmosphere = lazy(() => import("./sections/WeatherAtmosphere"));
 const DataAnalyst = lazy(() => import("./pages/DataAnalyst"));
 const DataEngineer = lazy(() => import("./pages/DataEngineer"));
+const AIAnalytics = lazy(() => import("./pages/AIAnalytics"));
 
 const LazySection = ({ children }) => (
   <Suspense fallback={<div className="min-h-[40vh]" aria-hidden="true" />}>
@@ -22,7 +23,7 @@ const LazySection = ({ children }) => (
 const getPage = () => {
   if (typeof window === "undefined") return "home";
   const hash = window.location.hash.replace("#/", "");
-  if (hash === "data-analyst" || hash === "data-engineer") return hash;
+  if (hash === "data-analyst" || hash === "data-engineer" || hash === "ai-analytics") return hash;
   return "home";
 };
 
@@ -60,6 +61,13 @@ const App = () => {
       return (
         <LazySection>
           <DataEngineer />
+        </LazySection>
+      );
+    }
+    if (page === "ai-analytics") {
+      return (
+        <LazySection>
+          <AIAnalytics />
         </LazySection>
       );
     }

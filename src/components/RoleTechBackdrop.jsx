@@ -18,10 +18,17 @@ const engineerTokens = [
   { name: "AWS", logo: "assets/logos/aws.svg", x: "70%", y: "80%", glow: "#f4a742", delay: "2.8s" },
 ];
 
+const aiTokens = [
+  { name: "NLP", logo: "assets/logos/python.svg", x: "75%", y: "12%", glow: "#33c2cc", delay: "0s" },
+  { name: "Pandas", logo: "assets/logos/python.svg", x: "82%", y: "39%", glow: "#ffb347", delay: "0.7s" },
+  { name: "CSAT", logo: "assets/logos/cdc.svg", x: "7%", y: "66%", glow: "#57db96", delay: "1.4s" },
+  { name: "Segments", logo: "assets/logos/tableau.svg", x: "70%", y: "78%", glow: "#7a57db", delay: "2.1s" },
+];
+
 const RoleTechBackdrop = ({ variant = "analyst" }) => {
   const rootRef = useRef(null);
   const raf = useRef(null);
-  const tokens = variant === "engineer" ? engineerTokens : analystTokens;
+  const tokens = variant === "engineer" ? engineerTokens : variant === "ai" ? aiTokens : analystTokens;
 
   useEffect(() => {
     const handlePointerMove = (event) => {

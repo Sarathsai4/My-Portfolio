@@ -165,6 +165,13 @@ export const roleCards = [
     desc: "Cloud ETL/ELT, Spark, Kafka, Airflow, dbt, warehouse models, data observability, and analytics-ready infrastructure.",
     tags: ["Python", "AWS", "Spark", "Kafka", "Airflow", "dbt"],
   },
+  {
+    title: "AI / CX Analytics",
+    level: "Customer experience data science, NLP, segmentation, and ML validation",
+    href: "#/ai-analytics",
+    desc: "Voice-of-customer analysis, support-ticket NLP, customer segmentation, churn modeling, statistical testing, and AI-assisted insight QA.",
+    tags: ["Python", "Pandas", "SQL", "NLP", "scikit-learn", "Tableau"],
+  },
 ];
 
 export const myProjects = [
