@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 const roleMetrics = {
   "Data Analyst": ["KPI governance", "Customer analytics", "BI storytelling"],
   "Data Engineer": ["Cloud pipelines", "Lakehouse layers", "Data observability"],
+  "AI / CX Analytics": ["Customer segmentation", "Support NLP", "Model validation"],
 };
 
 const RolePathways = () => {
@@ -67,12 +68,13 @@ const RolePathways = () => {
               Role focus
             </p>
             <h2 className="mt-4 text-4xl font-semibold leading-tight md:text-6xl">
-              One portfolio, two data stories
+              One portfolio, three data stories
             </h2>
             <p className="max-w-3xl mt-5 text-base leading-8 text-white/72 md:text-lg">
               Analyst-ready insight on one side, production-grade data systems on
-              the other. The same foundation carries KPI trust, governed metrics,
-              cloud pipelines, lakehouse patterns, and observability.
+              another, and AI/CX analytics layered on top. The same foundation carries
+              KPI trust, governed metrics, cloud pipelines, customer segmentation,
+              support intelligence, and model validation.
             </p>
           </div>
 
