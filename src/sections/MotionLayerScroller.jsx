@@ -6,7 +6,7 @@ const layers = [
     eyebrow: "Layer 01",
     title: "Raw Signals",
     text:
-      "Inventory, delivery, customer, marketplace, regulatory, and construction finance data enters as fragmented operational context.",
+      "Inventory, delivery, customer, marketplace, catalog, order, seller, and regulatory data enters as fragmented operational context.",
     tags: ["Python", "SQL", "APIs", "S3"],
     href: "#about",
     accent: "#33c2cc",

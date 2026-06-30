@@ -16,7 +16,7 @@ const analystFocus = [
   },
   {
     title: "Decision Science",
-    text: "Forecasting, variance analysis, root-cause analysis, safety-stock logic, reorder decision support, cost variance analysis, and data storytelling.",
+    text: "Forecasting, variance analysis, root-cause analysis, safety-stock logic, reorder decision support, fulfillment analytics, and data storytelling.",
   },
 ];
 
@@ -58,16 +58,16 @@ const analystProjects = [
       "Reduced redundant and inconsistent reporting metrics by 30%+ through governed Redshift and S3 reporting layers with reusable SQL transformations.",
   },
   {
-    title: "Construction Cost Variance and Forecasting BI",
-    stack: ["SQL", "Python", "Power BI", "Tableau", "BigQuery", "Data Quality"],
+    title: "Ecommerce Sales, Inventory and Fulfillment BI",
+    stack: ["SQL", "Python", "Power BI", "Excel", "Hive", "Spark"],
     accent: "#7a57db",
     visual: "monitoring",
-    metric: "$250K+ Risk",
-    signals: ["Budget", "Actuals", "Forecast", "Sites"],
+    metric: "Daily KPIs",
+    signals: ["Sales", "Inventory", "Orders", "Sellers"],
     summary:
-      "Automated financial ETL routines and centralized operational data from 5+ construction sites into SQL, Power Query, Excel, Python, and Power BI reporting workflows.",
+      "Created optimized analytical datasets for sales trends, inventory availability, customer purchasing behavior, order fulfillment, and seller performance across ecommerce product categories.",
     impact:
-      "Saved 30+ hours per month and helped prevent $250K+ in cost overruns through scheduled budget-vs-actual dashboards and lightweight forecasting.",
+      "Built Power BI and Excel dashboards that helped category managers and operations teams monitor sales performance, inventory movement, fulfillment metrics, and customer demand patterns.",
   },
 ];
 
@@ -79,7 +79,7 @@ const operationsSkills = [
   "Returns and Refund Analytics",
   "Customer Experience Metrics",
   "Seller and Marketplace Metrics",
-  "Cost Variance Analysis",
+  "Order Fulfillment Analytics",
   "Price-Sensitive Decision Support",
   "Executive Scorecards",
   "Self-Service Reporting",
@@ -94,7 +94,7 @@ const operationsTools = [
   "QuickSight",
   "Looker",
   "Excel",
-  "Power Query",
+  "Hive",
   "Snowflake",
   "BigQuery",
 ];
@@ -165,20 +165,20 @@ const operationsProjects = [
       "Reduced tracking errors by 60%+ and manual regulatory review effort by 70%+.",
   },
   {
-    title: "Construction Portfolio Cost Variance Reporting",
-    tools: ["SQL", "Power Query", "Excel", "Macros", "Python", "Power BI"],
+    title: "Flipkart Ecommerce ETL and Category KPI Reporting",
+    tools: ["Python", "SQL", "Spark", "Hadoop", "Hive", "Airflow"],
     accent: "#7a57db",
-    label: "Finance",
-    status: "Variance control",
+    label: "Ecommerce",
+    status: "Daily data",
     summary:
-      "Centralized construction-site financial and operational data into a SQL-backed reporting layer for portfolio-level cost visibility.",
+      "Built batch data pipelines that integrated customer, seller, inventory, catalog, and order datasets into centralized analytics environments.",
     bullets: [
-      "Automated monthly cost report consolidation across 5+ construction sites with SQL, Power Query, advanced Excel, and macros.",
-      "Built Power BI dashboards with scheduled refreshes and budget-vs-actual variance analysis.",
-      "Delivered weekly procurement summaries through Python-based automated reporting scripts.",
+      "Developed Sqoop, Hive, HDFS, and SQL ingestion workflows from transactional systems into daily reporting layers.",
+      "Improved Spark and Hive performance with partitioning, query tuning, indexing logic, and parallel processing.",
+      "Validated order, inventory, and revenue reporting outputs through reconciliation and data quality checks.",
     ],
     outcome:
-      "Saved 30+ hours per month and improved decision turnaround time by 40%.",
+      "Supported daily merchandising, supply chain, category performance, inventory synchronization, and catalog data processing workflows.",
   },
 ];
 
@@ -237,7 +237,7 @@ const DataAnalyst = () => {
           <p className="text-sm uppercase tracking-[0.3em] text-orange-300">Operations Alignment</p>
           <p className="mt-4 text-lg leading-8 text-white/78">
             My analytics work focuses on operational decision support: inventory exposure, reorder needs,
-            delivery exceptions, refunds, regulatory linkages, KPI trust, and cost variance. The common thread is
+            delivery exceptions, refunds, regulatory linkages, seller performance, order fulfillment, and KPI trust. The common thread is
             turning fragmented source data into reusable reporting layers that business users can act on.
           </p>
         </div>
@@ -319,7 +319,7 @@ const DataAnalyst = () => {
         <h2 className="text-heading">Operational Analytics & Decision Support Projects</h2>
         <p className="max-w-3xl mt-4 subtext">
           These projects extend the analyst toolkit into operational analytics: inventory planning,
-          self-service KPI layers, delivery quality, regulatory research datasets, and portfolio cost control.
+          self-service KPI layers, delivery quality, ecommerce reporting datasets, and regulatory research datasets.
         </p>
 
         <div className="mt-8 grid grid-cols-1 gap-4 lg:grid-cols-2">
