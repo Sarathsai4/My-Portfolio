@@ -3,200 +3,200 @@ import RoleTechBackdrop from "../components/RoleTechBackdrop";
 
 const analystFocus = [
   {
-    title: "KPI & Executive Reporting",
-    text: "Power BI, Tableau, Looker, Excel, self-service analytics, executive dashboards, KPI definitions, and stakeholder-facing reporting.",
+    title: "Inventory & Operations Analytics",
+    text: "Demand, reorder, inventory-risk, raw-material coverage, delivery performance, returns, refunds, and operational bottleneck analysis.",
   },
   {
-    title: "Customer & Audience Analytics",
-    text: "Customer data analysis, audience segmentation, CRM analytics, campaign performance, consumer behavior, guest experience, and business impact analysis.",
+    title: "KPI & Executive Reporting",
+    text: "Power BI, Tableau, QuickSight, Looker, executive scorecards, self-service analytics, KPI definitions, and stakeholder-facing reporting layers.",
   },
   {
     title: "Data Quality & Governance",
-    text: "Metric reconciliation, data validation, freshness monitoring, data dictionaries, business glossary, lineage, audit-ready documentation, and reporting standards.",
+    text: "Metric reconciliation, validation checks, schema drift detection, freshness monitoring, data dictionaries, business rules, lineage, and audit-ready documentation.",
   },
   {
     title: "Decision Science",
-    text: "Trend analysis, variance analysis, root-cause analysis, A/B testing, forecasting, statistical analysis, experimentation, and data storytelling.",
+    text: "Forecasting, variance analysis, root-cause analysis, safety-stock logic, reorder decision support, cost variance analysis, and data storytelling.",
   },
 ];
 
 const analystProjects = [
   {
-    title: "User Lifecycle, Retention & Churn Analytics Dashboard",
-    stack: ["SQL", "Python", "Tableau", "Looker", "Snowflake", "Customer Analytics"],
+    title: "Inventory Risk and Reorder Analytics Dashboard",
+    stack: ["SQL", "Python", "Power BI", "QuickSight", "Snowflake", "SQL Server"],
     accent: "#33c2cc",
     visual: "lifecycle",
-    metric: "Retention +18%",
-    signals: ["Acquire", "Engage", "Retain", "Churn Risk"],
+    metric: "30%+ Efficiency",
+    signals: ["Demand", "Safety Stock", "Reorder", "Coverage"],
     summary:
-      "Built a user lifecycle analytics dashboard to analyze customer behavior across acquisition, engagement, retention, and churn stages. Developed SQL-based datasets to track platform usage, content engagement, active user trends, retention cohorts, and churn-risk indicators.",
+      "Built BI-ready inventory views covering demand, reorder needs, safety stock, raw-material coverage, inventory exposure, and operational bottlenecks for planning and leadership teams.",
     impact:
-      "Created Tableau and Looker dashboards that helped stakeholders identify lifecycle drop-off points, evaluate growth opportunities, and translate user behavior patterns into actionable recommendations for marketing and product teams.",
+      "Improved reporting efficiency by 30%+ and gave business users filtered, sortable, exportable outputs for raw-material risk and reorder decisions.",
   },
   {
-    title: "Content Engagement & Subscriber Behavior Insights",
-    stack: ["SQL", "Python", "Power BI", "Tableau", "BigQuery", "Statistical Analysis"],
+    title: "Delivery, Returns and Refund Root-Cause Analytics",
+    stack: ["SQL", "Python", "Tableau", "Power BI", "AWS Glue", "Snowflake"],
     accent: "#ffb347",
     visual: "engagement",
-    metric: "Engagement 72%",
-    signals: ["Views", "Watch Time", "Categories", "Subscriber Value"],
+    metric: "40%+ Faster RCA",
+    signals: ["Delivery", "Refunds", "Returns", "Exceptions"],
     summary:
-      "Analyzed content consumption, user activity, and engagement trends to understand how viewing behavior influences retention, repeat usage, and subscriber value. Used SQL and Python to segment users by engagement level and identify high-performing content categories.",
+      "Unified customer, order, delivery, returns, inventory, and demand signals into analytical layers that supported guided investigation of operational spikes and exception patterns.",
     impact:
-      "Uncovered patterns linked to churn risk and lifecycle performance, then presented the insights through executive-ready dashboards and business narratives for cross-functional decision-making.",
+      "Accelerated root-cause analysis by helping users move from high-level business questions to targeted investigation paths across delivery, refund, and inventory drivers.",
   },
   {
-    title: "Enterprise Customer Data Quality and KPI Governance Analytics",
+    title: "LMAQ Logistics KPI Quality and SLA Reporting",
     stack: ["SQL", "Python", "Power BI", "Tableau", "Snowflake", "Data Validation"],
     accent: "#57db96",
     visual: "governance",
-    metric: "Discrepancy -35%",
-    signals: ["Rules", "KPI Logic", "Reconcile", "Trust"],
+    metric: "Metrics -30%",
+    signals: ["SLA", "Geocode", "Defects", "Freshness"],
     summary:
-      "Built a customer data quality and KPI governance framework to validate business metrics, reconcile reporting logic, and improve trust in analytics-ready datasets. Developed SQL validation checks, dashboards, and documentation for KPI definitions, assumptions, rules, and reporting methodology.",
+      "Transformed delivery, routing, geocode, shipment, inventory, returns, and defect data into standardized analytical tables for last-mile quality and customer-impact reporting.",
     impact:
-      "Improved metric consistency and reduced reporting discrepancies by 35%, helping business teams rely on accurate and reusable analytics outputs.",
+      "Reduced redundant and inconsistent reporting metrics by 30%+ through governed Redshift and S3 reporting layers with reusable SQL transformations.",
   },
   {
-    title: "Real-Time KPI Monitoring and Trusted Dataset Development",
+    title: "Construction Cost Variance and Forecasting BI",
     stack: ["SQL", "Python", "Power BI", "Tableau", "BigQuery", "Data Quality"],
     accent: "#7a57db",
     visual: "monitoring",
-    metric: "Timeliness +30%",
-    signals: ["Freshness", "SLA", "Volume", "Exceptions"],
+    metric: "$250K+ Risk",
+    signals: ["Budget", "Actuals", "Forecast", "Sites"],
     summary:
-      "Created near real-time KPI monitoring logic to track data freshness, reporting SLAs, volume changes, exception patterns, and dashboard-impacting data issues before they affected business users.",
+      "Automated financial ETL routines and centralized operational data from 5+ construction sites into SQL, Power Query, Excel, Python, and Power BI reporting workflows.",
     impact:
-      "Built validation rules to identify data delays, reporting inconsistencies, and transformation errors, improving reporting timeliness by 30% while strengthening governance, audit-readiness, and metric reliability.",
+      "Saved 30+ hours per month and helped prevent $250K+ in cost overruns through scheduled budget-vs-actual dashboards and lightweight forecasting.",
   },
 ];
 
 const operationsSkills = [
-  "Remote Production Support",
-  "Event Logistics",
-  "Production Documentation",
-  "Scheduling Coordination",
-  "Task Tracking",
-  "Meeting Coordination",
-  "Vendor Follow-Up",
-  "Stakeholder Communication",
-  "Production Material Tracking",
-  "Operational Reporting",
-  "Process Documentation",
-  "Cross-Functional Coordination",
+  "Demand Forecasting",
+  "Inventory Optimization",
+  "Reorder Analytics",
+  "Safety Stock Analysis",
+  "Returns and Refund Analytics",
+  "Customer Experience Metrics",
+  "Seller and Marketplace Metrics",
+  "Cost Variance Analysis",
+  "Price-Sensitive Decision Support",
+  "Executive Scorecards",
+  "Self-Service Reporting",
+  "Metric Reconciliation",
 ];
 
 const operationsTools = [
-  "Excel",
-  "Outlook",
-  "Word",
-  "PowerPoint",
-  "Teams",
+  "SQL",
+  "Python",
   "Power BI",
-  "SharePoint",
-  "OneDrive",
-  "Google Sheets",
+  "Tableau",
+  "QuickSight",
+  "Looker",
+  "Excel",
   "Power Query",
+  "Snowflake",
+  "BigQuery",
 ];
 
 const operationsProjects = [
   {
-    title: "Remote Production Operations Tracker for Event Coordination",
-    tools: ["Excel", "Google Sheets", "Power BI", "Outlook", "Teams", "PowerPoint"],
+    title: "CassetteIQ Power BI-Style Planning Output Table",
+    tools: ["SQL Server", "Python", "Power BI", "React", "FastAPI", "Excel Export"],
     accent: "#ff7a33",
-    label: "Event Ops",
-    status: "Priority visibility",
+    label: "Planning",
+    status: "Formula parity",
     summary:
-      "Designed a production operations tracking system to organize event logistics, staff schedules, documentation, vendor follow-ups, and task ownership across remote and event-based workflows.",
+      "Built a Power BI-style output table for order-policy review, raw-material risk, safety stock, reorder needs, and inventory-planning decisions.",
     bullets: [
-      "Created structured trackers for event schedules, staff assignments, transportation needs, vendor follow-ups, production materials, and task status.",
-      "Built summary views for pending items, high-priority tasks, upcoming deadlines, responsible owners, dependencies, and notes.",
-      "Standardized recurring updates, meeting notes, task handoffs, and production checklists for clearer team coordination.",
+      "Added formula-driven columns, status filters, search, column controls, sortable views, and CSV, Excel, and PNG exports.",
+      "Re-derived replenishment logic and corrected a unit-conversion defect that affected order-policy outputs.",
+      "Validated reorder, safety-stock, raw-coverage, and inventory-planning formulas against trusted business reporting.",
     ],
     outcome:
-      "Improved visibility into pending production tasks and helped teams coordinate faster across internal groups and external stakeholders.",
+      "Reconciled 100% of order-policy outputs to the Power BI baseline and improved usability for planning teams.",
   },
   {
-    title: "Event Logistics and Scheduling Coordination Dashboard",
-    tools: ["Excel", "Power BI", "Power Query", "Outlook Calendar", "Teams"],
+    title: "Self-Service KPI Reporting Layers for Program Analytics",
+    tools: ["SQL", "Python", "dbt-style Workflows", "Power BI", "BigQuery"],
     accent: "#33c2cc",
-    label: "Schedule",
-    status: "Conflict tracking",
+    label: "KPI Layer",
+    status: "Metric trust",
     summary:
-      "Developed a scheduling and logistics dashboard to track event timelines, staff availability, task assignments, transportation needs, and operational dependencies.",
+      "Produced reusable reporting layers and semantic metric definitions for KPI dashboards, executive reporting, exploratory analysis, and ML experimentation.",
     bullets: [
-      "Built a centralized event schedule tracker with fields for owner, time window, priority, resource requirement, and status.",
-      "Used Excel formulas and Power Query to clean, organize, and summarize event and task data.",
-      "Created Power BI views for upcoming deadlines, incomplete tasks, staffing coverage, task distribution, and filters by owner or priority.",
+      "Transformed fragmented operational data through modular Python, SQL, and dbt-style workflows.",
+      "Created standardized business rules and dimensional marts for trusted dashboard consumption.",
+      "Applied quality checks for schema drift, missing values, duplicates, and inconsistent metrics before data reached dashboards.",
     ],
     outcome:
-      "Made logistics information easier to monitor from one place and supported faster planning in a fast-moving environment.",
+      "Reduced manual reporting dependency by 25%+ and dashboard data errors by 35%+.",
   },
   {
-    title: "Production Documentation and Communication Workflow System",
-    tools: ["Word", "PowerPoint", "Excel", "Outlook", "Teams", "OneDrive"],
+    title: "Last-Mile Delivery Defect and SLA Analytics",
+    tools: ["SQL", "PySpark", "AWS S3", "EMR", "Glue", "Redshift"],
     accent: "#57db96",
-    label: "Docs",
-    status: "Clear handoffs",
+    label: "LMAQ",
+    status: "SLA visibility",
     summary:
-      "Created a structured documentation workflow for recurring operational updates, meeting coordination, action items, task handoffs, and stakeholder communication.",
+      "Analyzed last-mile delivery quality data to track geospatial accuracy, address-quality issues, exception rates, delivery delays, and customer-facing logistics signals.",
     bullets: [
-      "Developed reusable templates for production notes, meeting agendas, follow-up emails, action items, and status reports.",
-      "Organized documents by project and event category so production information could be retrieved and distributed quickly.",
-      "Created daily and weekly update formats covering completed tasks, blockers, next steps, ownership, and follow-up dates.",
+      "Transformed delivery, routing, geocode, shipment, inventory, returns, and defect data into standardized analytical tables.",
+      "Used SQL, PySpark, and dbt-style checks to detect missing records, delayed feeds, duplicate events, and geocode mismatches.",
+      "Monitored freshness, failures, and event-stream changes through Kafka-based feeds and CloudWatch observability.",
     ],
     outcome:
-      "Reduced confusion by standardizing how updates were captured and shared across internal teams and stakeholders.",
+      "Strengthened reporting reliability for operations teams, LMAQ stakeholders, and leadership users.",
   },
   {
-    title: "Production Materials Management and Distribution Tracker",
-    tools: ["Excel", "SharePoint", "OneDrive", "Power BI", "Outlook", "Teams"],
+    title: "Regulatory Linkage and Research-Ready Dataset Analytics",
+    tools: ["Python", "SQL", "AWS S3", "BigQuery", "NLP", "PDF Extraction"],
     accent: "#d6995c",
-    label: "Assets",
-    status: "Approval flow",
+    label: "Research",
+    status: "Linked entities",
     summary:
-      "Built a tracking system to manage production-related materials such as graphics requests, promotional assets, sales content, documentation, and approval status.",
+      "Delivered research-ready and ML-ready datasets connecting NHTSA complaints, investigations, recalls, and SEC filing signals.",
     bullets: [
-      "Tracked asset name, category, owner, request date, due date, status, approval notes, and stakeholder deliverables.",
-      "Organized materials into graphics, promotional content, reports, documentation, and stakeholder-ready outputs.",
-      "Created status summaries for pending approvals, completed materials, delayed items, and owner-specific tasks.",
+      "Extracted complaint IDs, investigation IDs, recall IDs, filing references, manufacturer signals, and entity-level attributes.",
+      "Validated compliance-to-investigation-to-resolution linkages with reconciliation checks and structured logging.",
+      "Documented schema assumptions and source-to-target mappings for downstream BI, NLP, and AI investigation workflows.",
     ],
     outcome:
-      "Improved accountability by making asset readiness, ownership, and due dates easier to review and follow up on.",
+      "Reduced tracking errors by 60%+ and manual regulatory review effort by 70%+.",
   },
   {
-    title: "Remote Team Coordination and Task Automation Workflow",
-    tools: ["Outlook", "Excel", "Power Automate", "Teams", "Power BI"],
+    title: "Construction Portfolio Cost Variance Reporting",
+    tools: ["SQL", "Power Query", "Excel", "Macros", "Python", "Power BI"],
     accent: "#7a57db",
-    label: "Automation",
-    status: "Follow-up control",
+    label: "Finance",
+    status: "Variance control",
     summary:
-      "Designed a workflow to support high-volume remote coordination by organizing emails, task requests, follow-ups, approvals, and stakeholder updates.",
+      "Centralized construction-site financial and operational data into a SQL-backed reporting layer for portfolio-level cost visibility.",
     bullets: [
-      "Created structured templates for recurring email responses, meeting follow-ups, task summaries, and status updates.",
-      "Built trackers for requests, pending approvals, follow-up dates, stakeholder ownership, priority, and completion status.",
-      "Used automation logic to classify tasks and produce dashboard-style summaries for open requests, overdue items, and completed actions.",
+      "Automated monthly cost report consolidation across 5+ construction sites with SQL, Power Query, advanced Excel, and macros.",
+      "Built Power BI dashboards with scheduled refreshes and budget-vs-actual variance analysis.",
+      "Delivered weekly procurement summaries through Python-based automated reporting scripts.",
     ],
     outcome:
-      "Reduced manual tracking effort and improved response consistency for remote coordination and operational follow-through.",
+      "Saved 30+ hours per month and improved decision turnaround time by 40%.",
   },
 ];
 
 const cxAnalyticsBridge = [
   {
-    title: "Customer Segmentation for Marketing",
-    tags: ["Python", "Pandas", "SQL", "Clustering", "Lifecycle"],
-    text: "Segment customers by engagement, retention signals, campaign response, and support friction so marketing teams can target the right intervention instead of treating every customer journey the same.",
+    title: "Wendy-Powered Natural-Language Analytics",
+    tags: ["FastAPI", "OpenAI API", "SQL", "Inventory", "Guardrails"],
+    text: "Expose aggregated inventory, demand, reorder, delivery, refund, and operational summaries through a secure AI analyst while keeping API keys and business data out of the browser.",
   },
   {
-    title: "Voice-of-Customer Support Intelligence",
-    tags: ["NLP", "CSAT", "NPS", "Support Tickets", "Dashboards"],
-    text: "Synthesize surveys, support tickets, chat-style feedback, and operational data into measurable themes, pain points, and self-service opportunities for CX and support teams.",
+    title: "AI-Assisted Regulatory Extraction",
+    tags: ["NLP", "PDFs", "NHTSA", "SEC EDGAR", "BigQuery"],
+    text: "Use semantic NLP and AI-assisted extraction to connect complaints, investigations, recalls, filings, manufacturers, and entity-level signals for regulatory research.",
   },
   {
-    title: "Methodology-Defensible AI Analysis",
-    tags: ["AI QA", "Regression", "Model Checks", "Jupyter", "Storytelling"],
-    text: "Use AI to accelerate exploration while independently validating SQL, Pandas logic, model assumptions, feature definitions, and whether the output is reliable enough to defend.",
+    title: "Validated AI Investigation Workflows",
+    tags: ["RAG", "Validation", "Reconciliation", "Lineage", "Auditability"],
+    text: "Pair AI speed with validation checks, schema assumptions, reconciliation, lineage, and documented guardrails so AI-assisted findings can be trusted by business users.",
   },
 ];
 
@@ -209,11 +209,12 @@ const DataAnalyst = () => {
         <div className="max-w-4xl">
           <p className="text-sm uppercase tracking-[0.35em] text-aqua">Data Analyst</p>
           <h1 className="mt-5 text-4xl font-semibold md:text-7xl">
-            Basic-to-advanced analytics for trusted business decisions.
+            Analytics engineering for trusted business decisions.
           </h1>
           <p className="max-w-3xl mt-6 text-lg text-neutral-300">
-            This section positions my work for data analyst roles: SQL-first analysis, BI dashboards,
-            KPI governance, customer analytics, reporting quality, and stakeholder-ready insight delivery.
+            This section highlights SQL-first analysis, BI dashboards, KPI governance,
+            OLAP reporting layers, operational analytics, forecasting support, and
+            stakeholder-ready insight delivery.
           </p>
           <div className="flex flex-wrap gap-3 mt-8">
             <a className="role-link role-link-primary" href={`mailto:${contactEmail}`}>{contactEmail}</a>
@@ -235,11 +236,9 @@ const DataAnalyst = () => {
         <div className="operations-bridge role-card">
           <p className="text-sm uppercase tracking-[0.3em] text-orange-300">Operations Alignment</p>
           <p className="mt-4 text-lg leading-8 text-white/78">
-            In addition to data analytics and dashboard development, I have worked on operations-focused projects
-            involving task coordination, documentation management, communication workflows, scheduling trackers,
-            reporting templates, and cross-functional follow-up systems. These projects strengthened my ability to
-            organize information flow, support fast-moving teams, manage deadlines, and communicate clearly across
-            stakeholders in remote and event-driven environments.
+            My analytics work focuses on operational decision support: inventory exposure, reorder needs,
+            delivery exceptions, refunds, regulatory linkages, KPI trust, and cost variance. The common thread is
+            turning fragmented source data into reusable reporting layers that business users can act on.
           </p>
         </div>
       </section>
@@ -247,8 +246,8 @@ const DataAnalyst = () => {
       <section className="relative z-10 mt-20">
         <h2 className="text-heading">Analyst Toolkit</h2>
         <p className="max-w-3xl mt-4 subtext">
-          A focused toolkit for analyst-facing capabilities across BI, customer analytics, governance,
-          privacy-aware reporting, metric definitions, and advanced SQL analysis.
+          A focused toolkit for BI, OLAP reporting, governance, metric definitions,
+          reconciliation, forecasting support, and advanced SQL analysis.
         </p>
         <SkillMatrix groups={skillGroups} />
       </section>
@@ -256,17 +255,17 @@ const DataAnalyst = () => {
       <section className="relative z-10 mt-20">
         <div className="cx-analytics-bridge role-card">
           <div className="max-w-3xl">
-            <p className="text-sm uppercase tracking-[0.3em] text-aqua">Customer Experience Data Science</p>
+            <p className="text-sm uppercase tracking-[0.3em] text-aqua">GenAI Analytics Bridge</p>
             <h2 className="mt-4 text-3xl font-semibold text-white md:text-4xl">
-              Analyst work that connects marketing, support, and machine learning.
+              Analyst work that connects governed data with AI-assisted investigation.
             </h2>
             <p className="mt-5 subtext">
-              This bridge expands the analyst portfolio into technical CX analytics: segmentation for marketing,
-              Voice-of-Customer analysis, support-ticket NLP, regression-based driver analysis, and AI-assisted
-              quality checks that keep the methodology explainable.
+              This bridge expands the analytics portfolio into GenAI workflows: secure FastAPI model access,
+              RAG-style context grounding, semantic extraction, guided root-cause analysis, and validation checks
+              that keep AI-assisted findings explainable.
             </p>
             <a className="inline-flex mt-6 role-link role-link-primary" href="#/ai-analytics">
-              Open AI / CX Analytics
+              Open GenAI Analytics
             </a>
           </div>
           <div className="grid grid-cols-1 gap-4 mt-8 lg:grid-cols-3">
@@ -290,8 +289,8 @@ const DataAnalyst = () => {
       <section className="relative z-10 mt-20">
         <h2 className="text-heading">Relevant Analytics Work</h2>
         <p className="max-w-3xl mt-4 subtext">
-          These projects emphasize customer analytics, subscriber behavior, KPI trust, and governed datasets for
-          stakeholder-ready decision-making.
+          These projects emphasize inventory analytics, logistics quality, KPI trust,
+          governed datasets, and cost-variance decision support.
         </p>
         <div className="grid grid-cols-1 gap-4 mt-8 md:grid-cols-2">
           {analystProjects.map((project) => (
@@ -317,11 +316,10 @@ const DataAnalyst = () => {
       </section>
 
       <section className="relative z-10 mt-20">
-        <h2 className="text-heading">Operations, Production Support & Workflow Coordination Projects</h2>
+        <h2 className="text-heading">Operational Analytics & Decision Support Projects</h2>
         <p className="max-w-3xl mt-4 subtext">
-          These projects extend the analyst toolkit into operational coordination: tracking deadlines, organizing
-          production-style materials, documenting handoffs, improving follow-up loops, and creating clear reporting
-          views for busy teams.
+          These projects extend the analyst toolkit into operational analytics: inventory planning,
+          self-service KPI layers, delivery quality, regulatory research datasets, and portfolio cost control.
         </p>
 
         <div className="mt-8 grid grid-cols-1 gap-4 lg:grid-cols-2">
@@ -354,7 +352,7 @@ const DataAnalyst = () => {
         </div>
 
         <div className="mt-8 grid grid-cols-1 gap-4 lg:grid-cols-[1.25fr_0.75fr]">
-          <InfoPillPanel title="Production & Operations Coordination" items={operationsSkills} />
+          <InfoPillPanel title="Domain Analytics" items={operationsSkills} />
           <InfoPillPanel title="Tools" items={operationsTools} />
         </div>
       </section>

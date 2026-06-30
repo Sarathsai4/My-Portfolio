@@ -6,18 +6,18 @@ const layers = [
     eyebrow: "Layer 01",
     title: "Raw Signals",
     text:
-      "Operational, customer, product, and event data enters the portfolio story as messy, moving context.",
-    tags: ["SQL", "Python", "APIs", "S3"],
+      "Inventory, delivery, customer, marketplace, regulatory, and construction finance data enters as fragmented operational context.",
+    tags: ["Python", "SQL", "APIs", "S3"],
     href: "#about",
     accent: "#33c2cc",
     logo: "assets/logos/python.svg",
   },
   {
     eyebrow: "Layer 02",
-    title: "Trusted Metrics",
+    title: "Trusted Models",
     text:
-      "Analyst-facing work turns that context into governed KPIs, quality checks, reporting layers, and business-ready answers.",
-    tags: ["Power BI", "Tableau", "Looker", "Quality"],
+      "Dimensional marts, OLAP models, KPI definitions, and reconciliation checks turn that context into reporting layers people can trust.",
+    tags: ["Redshift", "Snowflake", "BigQuery", "Quality"],
     href: "#/data-analyst",
     accent: "#f9d94a",
     logo: "assets/logos/power-bi.svg",
@@ -26,18 +26,18 @@ const layers = [
     eyebrow: "Layer 03",
     title: "Production Pipelines",
     text:
-      "Engineer-facing work scales the same logic into Spark, Kafka, Airflow, dbt, lakehouse, and cloud infrastructure patterns.",
-    tags: ["Spark", "Kafka", "Airflow", "dbt"],
+      "Engineer-facing work scales the same logic into AWS Glue, EMR, Spark, Kafka, Airflow, dbt, and cloud warehouse patterns.",
+    tags: ["Glue", "EMR", "Spark", "Airflow"],
     href: "#/data-engineer",
     accent: "#ff7a33",
     logo: "assets/logos/apache-spark.svg",
   },
   {
     eyebrow: "Layer 04",
-    title: "Project Proof",
+    title: "AI-Assisted Delivery",
     text:
-      "The project books show how the layers come together: ingestion, modeling, governance, monitoring, and stakeholder delivery.",
-    tags: ["Lakehouse", "Forecasting", "BI", "Observability"],
+      "The project books show how the layers come together in CassetteIQ, regulatory extraction, LMAQ logistics, and secure GenAI workflows.",
+    tags: ["FastAPI", "RAG", "BI", "Observability"],
     href: "#projects",
     accent: "#7a57db",
     logo: "assets/logos/databricks.svg",
@@ -61,15 +61,15 @@ const MotionLayerScroller = () => {
       <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
         <div className="lg:sticky lg:top-28">
           <p className="text-sm uppercase tracking-[0.38em] text-aqua">
-            Motion Layer Scroller
+            Resume-aligned data layers
           </p>
           <h2 className="mt-4 text-4xl font-semibold leading-tight md:text-6xl">
-            Scroll through the portfolio like a data system.
+            Scroll through the portfolio like a governed analytics platform.
           </h2>
           <p className="max-w-2xl mt-5 subtext">
-            A layered scroller gives viewers a fast mental model of the site:
-            raw signals, trusted analytics, production engineering, and project
-            proof. Each layer links into the existing portfolio pages.
+            A layered scroller gives viewers a fast mental model of the work:
+            fragmented source data, trusted models, production pipelines, and
+            AI-assisted delivery. Each layer links into the portfolio pages.
           </p>
         </div>
 

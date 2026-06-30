@@ -1,11 +1,11 @@
 import { useRef } from "react";
-import { contactEmail } from "../constants";
+import { contactEmail, profile } from "../constants";
 
 const quickDetails = [
-  "Cincinnati, OH",
-  "Data Analyst",
   "Data Engineer",
-  "Analytics Engineering",
+  "AWS Data Engineering",
+  "OLAP Data Models",
+  "GenAI Analytics",
 ];
 
 const InteractiveIntroCard = () => {
@@ -58,12 +58,12 @@ const InteractiveIntroCard = () => {
           Portfolio Identity
         </p>
         <h2 className="mt-3 text-2xl font-semibold text-white sm:text-3xl">
-          Sarath Sai Grandhe
+          {profile.name}
         </h2>
         <p className="mt-3 subtext">
-          I build the connective tissue between raw data and business decisions:
-          analytics-ready pipelines, trusted KPI layers, executive dashboards,
-          and governed datasets for analyst and engineer workflows.
+          I build governed data systems that turn operational, inventory, delivery,
+          marketplace, and regulatory data into trusted reporting layers, ML-ready
+          datasets, executive dashboards, and GenAI-assisted analytics workflows.
         </p>
 
         <div className="flex flex-wrap gap-2 mt-5">

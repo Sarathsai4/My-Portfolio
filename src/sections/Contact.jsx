@@ -75,7 +75,7 @@ const Contact = () => {
         <div className="flex flex-col items-start w-full gap-5 mb-10">
           <h2 className="text-heading">Let us Talk</h2>
           <p className="font-normal text-neutral-400">
-            For data analyst, analytics engineering, and data engineering opportunities, reach me at{" "}
+            For AWS data engineering, analytics engineering, BI, and GenAI analytics opportunities, reach me at{" "}
             <a className="text-white" href={`mailto:${contactEmail}`}>{contactEmail}</a>.
           </p>
         </div>

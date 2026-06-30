@@ -3,20 +3,20 @@ import RoleTechBackdrop from "../components/RoleTechBackdrop";
 
 const capabilityGroups = [
   {
-    title: "CX & Voice-of-Customer Analytics",
-    items: ["NPS", "CSAT", "Support Tickets", "Chat Logs", "Survey Feedback", "Customer Journey Pain Points"],
+    title: "GenAI Analytics Workflows",
+    items: ["Natural-Language Analysis", "Guided Investigation", "Root-Cause Analysis", "Operational Summaries", "Executive Questions", "Self-Service BI"],
   },
   {
-    title: "Marketing Data Science",
-    items: ["Customer Segmentation", "Lifecycle Targeting", "Campaign Response", "Retention Cohorts", "Churn Signals", "Persona Analysis"],
+    title: "RAG & Semantic Extraction",
+    items: ["RAG Pipelines", "Vector Databases", "Regulatory PDFs", "NHTSA Complaints", "SEC Filings", "Entity Linkage"],
   },
   {
-    title: "Technical Methods",
-    items: ["SQL Temp Tables", "Python Pandas", "Data Structures", "Regression", "NLP", "Clustering", "Model Evaluation", "Root-Cause Analysis"],
+    title: "Secure AI Delivery",
+    items: ["FastAPI Proxy", "Server-Side API Keys", "Model Selection", "Network Controls", "PII Handling", "Access Controls"],
   },
   {
-    title: "AI-Assisted Analysis QA",
-    items: ["Prompted Analysis", "Output Validation", "Error Detection", "Assumption Checks", "Reproducible Notebooks", "Stakeholder Storytelling"],
+    title: "Validation & Guardrails",
+    items: ["Output Validation", "Reconciliation", "Schema Assumptions", "Prompt-Injection Defenses", "Auditability", "Human Review"],
   },
 ];
 
@@ -29,89 +29,92 @@ const aiStack = [
   "R",
   "scikit-learn",
   "NLP",
-  "Regression",
-  "Clustering",
-  "Sentiment Analysis",
-  "Topic Modeling",
+  "RAG Pipelines",
+  "Vector Databases",
+  "LangChain",
+  "LlamaIndex",
+  "OpenAI API",
+  "Azure OpenAI",
+  "FastAPI",
   "Tableau",
   "Power BI",
   "Jupyter Notebook",
   "BigQuery",
   "Snowflake",
-  "AI Validation",
+  "AI Guardrails",
 ];
 
 const cxProjects = [
   {
-    title: "Voice-of-Customer NLP & Support Ticket Intelligence",
+    title: "Wendy Internal AI Analyst for Inventory Operations",
     accent: "#33c2cc",
-    method: "NLP + Topic Modeling",
-    tools: ["Python", "Pandas", "SQL", "NLP", "scikit-learn", "Tableau"],
+    method: "Secure GenAI Analytics",
+    tools: ["FastAPI", "OpenAI API", "Python", "SQL", "React", "Guardrails"],
     summary:
-      "Built a customer support analytics workflow to synthesize surveys, support tickets, chat-style feedback, and operational data into measurable CX themes, friction points, and escalation drivers.",
+      "Integrated Wendy, General Data's internal custom GPT-style AI analyst, through a secure backend proxy for natural-language analysis over governed inventory and operational summaries.",
     methodology: [
-      "Used SQL temporary tables to stage feedback, customer attributes, ticket metadata, and journey events before modeling.",
-      "Applied text preprocessing, sentiment scoring, keyword extraction, topic grouping, and support issue clustering to identify repeatable pain-point categories.",
-      "Validated model outputs by sampling records, checking mislabeled themes, comparing results to known support categories, and documenting assumptions.",
+      "Kept API-key handling server-side through FastAPI so credentials and business data were not exposed in the browser.",
+      "Supported model selection and company-network controls for safer AI access inside the application workflow.",
+      "Grounded user questions in aggregated inventory, demand, reorder, FLX/L shared-pool, refund, delivery, and operational summaries.",
     ],
     impact:
-      "Created stakeholder-ready outputs that connected customer language to root-cause themes, support volume, self-service opportunities, and product improvement areas.",
+      "Helped users investigate inventory risks, reorder anomalies, delivery issues, refund patterns, and operational exceptions without manually querying multiple reports.",
   },
   {
-    title: "Marketing Customer Segmentation & Lifecycle Targeting Model",
+    title: "AI-Assisted Regulatory Document Extraction",
     accent: "#ffb347",
-    method: "Clustering + Segmentation",
-    tools: ["Python", "Pandas", "SQL", "K-Means", "Tableau", "Power BI"],
+    method: "NLP + Entity Linkage",
+    tools: ["Python", "SQL", "NLP", "BigQuery", "AWS S3", "PDF Extraction"],
     summary:
-      "Designed a marketing segmentation analysis to group customers by engagement behavior, lifecycle stage, support friction, retention risk, and channel responsiveness.",
+      "Automated semantic NLP and AI-assisted extraction across unstructured regulatory PDFs, NHTSA data, and SEC EDGAR filings.",
     methodology: [
-      "Engineered features for usage frequency, recency, support contact rate, satisfaction signals, campaign engagement, and subscription behavior.",
-      "Used clustering and cohort logic to create interpretable customer groups for marketing, lifecycle, and support prioritization.",
-      "Compared segment stability, outlier behavior, and business interpretability before translating clusters into stakeholder recommendations.",
+      "Identified and linked complaint IDs, investigation IDs, recall/resolution IDs, filing references, manufacturer signals, and entity-level attributes.",
+      "Converted raw API, PDF, web, and semi-structured inputs into governed analytical tables for BI, NLP, and AI investigation.",
+      "Validated compliance-to-investigation-to-resolution linkages with reconciliation checks, checkpointing, logging, and documented assumptions.",
     ],
     impact:
-      "Helped show where targeted messaging, self-service resources, and support interventions could improve retention and customer satisfaction.",
+      "Reduced manual regulatory review effort by 70%+ and tracking errors by 60%+ while enabling semantic search and entity-level risk exploration.",
   },
   {
-    title: "Customer Experience Driver Modeling for CSAT, NPS & Churn Risk",
+    title: "AI-Assisted Operational Root-Cause Analysis",
     accent: "#57db96",
-    method: "Regression + ML",
-    tools: ["Python", "Pandas", "SQL", "Regression", "Random Forest", "Jupyter"],
+    method: "Guided Investigation",
+    tools: ["Python", "SQL", "Power BI", "Tableau", "QuickSight", "FastAPI"],
     summary:
-      "Developed a CX modeling framework to identify which behavioral, support, operational, and feedback variables were most associated with satisfaction, loyalty, and churn risk.",
+      "Built AI-assisted workflows that converted business questions into guided investigation paths across contact spikes, delivery issues, refunds, inventory risks, reorder anomalies, and material-planning exceptions.",
     methodology: [
-      "Integrated survey, support, behavioral, and transactional features into analytical tables using SQL and Pandas.",
-      "Built regression and tree-based models to estimate drivers of CSAT/NPS movement and churn-risk patterns.",
-      "Evaluated feature importance, residual patterns, data leakage risks, missingness, and model stability before communicating findings.",
+      "Prepared governed summaries that separated sensitive source data from AI-facing analytical context.",
+      "Connected AI narratives back to dashboard metrics and formula-driven outputs so users could verify suggested investigation paths.",
+      "Used validation and reconciliation checks to reduce the risk of misleading explanations reaching business users.",
     ],
     impact:
-      "Produced defensible driver insights that could support corrective actions, experimentation ideas, and customer journey improvement priorities.",
+      "Accelerated root-cause analysis by 40%+ and improved reporting efficiency by 30%+ across BI and web-based dashboard views.",
   },
   {
-    title: "AI-Assisted Analytics QA & Methodology Defense System",
+    title: "Governed GenAI Analytics Delivery Pattern",
     accent: "#7a57db",
-    method: "AI + Validation",
-    tools: ["Python", "SQL", "Pandas", "Jupyter", "AI Tools", "Documentation"],
+    method: "AI + Governance",
+    tools: ["Python", "SQL", "RAG", "Lineage", "Auditability", "Access Controls"],
     summary:
-      "Created a repeatable workflow for using AI to accelerate analysis while preserving methodological control, reproducibility, and validation of generated outputs.",
+      "Created a repeatable pattern for applying AI to analytics without losing governance, validation, lineage, or control over sensitive operational context.",
     methodology: [
-      "Used AI to accelerate query drafting, feature brainstorming, summarization, and analysis outlines while independently checking logic and assumptions.",
-      "Validated generated SQL, Pandas transformations, segment definitions, and statistical interpretations against source data and expected business behavior.",
-      "Documented failure modes, confidence checks, hand-reviewed samples, and decision rules so outputs could be defended under stakeholder review.",
+      "Combined prompt-injection defenses, access controls, PII handling, encryption, and auditability with model-assisted analysis.",
+      "Documented schema assumptions, source-to-target mappings, confidence checks, and validation rules.",
+      "Used AI to speed analysis while keeping final conclusions tied to governed tables, reproducible transformations, and reviewable evidence.",
     ],
     impact:
-      "Demonstrated the ability to use AI for speed without outsourcing judgment, especially when identifying whether generated outputs are wrong, incomplete, or misleading.",
+      "Demonstrated GenAI delivery that is useful for business users and defensible for data engineering, governance, and leadership stakeholders.",
   },
 ];
 
 const methodologySteps = [
-  "Define the customer question and decision owner",
-  "Stage source data with SQL temporary tables",
-  "Profile data quality, missingness, and support-channel bias",
-  "Engineer behavioral, feedback, and operational features",
-  "Build interpretable segmentation, NLP, or regression models",
-  "Validate assumptions, model outputs, and failure modes",
-  "Translate findings into CX actions, dashboards, and narratives",
+  "Define the business question and trusted data scope",
+  "Prepare aggregated analytical context from governed tables",
+  "Protect credentials, PII, and sensitive operational data",
+  "Ground AI responses in validated summaries or retrieved evidence",
+  "Check formulas, lineage, assumptions, and reconciliation outputs",
+  "Route uncertain or high-impact findings through human review",
+  "Translate validated findings into dashboards, actions, and narratives",
 ];
 
 const AIAnalytics = () => {
@@ -121,14 +124,14 @@ const AIAnalytics = () => {
 
       <section className="relative z-10 role-hero">
         <div className="max-w-4xl">
-          <p className="text-sm uppercase tracking-[0.35em] text-orange-300">AI / CX Analytics</p>
+          <p className="text-sm uppercase tracking-[0.35em] text-orange-300">GenAI Analytics</p>
           <h1 className="mt-5 text-4xl font-semibold md:text-7xl">
-            Customer experience data science with defensible methodology.
+            GenAI analytics with secure delivery and defensible methodology.
           </h1>
           <p className="max-w-3xl mt-6 text-lg text-neutral-300">
-            This section positions my work for technical CX analytics roles that require customer segmentation,
-            support analytics, Python/Pandas, SQL temp-table workflows, statistical modeling, NLP, machine
-            learning, and AI-assisted analysis that can be validated and explained.
+            This section highlights resume-backed AI analytics work: Wendy-powered natural-language analysis,
+            RAG-style workflows, semantic regulatory extraction, secure FastAPI model proxies, guarded access,
+            and AI-assisted findings that can be validated and explained.
           </p>
           <div className="flex flex-wrap gap-3 mt-8">
             <a className="role-link role-link-primary" href={`mailto:${contactEmail}`}>{contactEmail}</a>
@@ -155,12 +158,12 @@ const AIAnalytics = () => {
           <div>
             <p className="text-sm uppercase tracking-[0.3em] text-aqua">Methodology Ownership</p>
             <h2 className="mt-4 text-3xl font-semibold text-white md:text-4xl">
-              Built to defend the analysis cold, not just maintain dashboards.
+              Built to accelerate analysis without losing governance.
             </h2>
             <p className="mt-5 subtext">
-              The workflow emphasizes from-scratch analytical ownership: define the customer problem, build the
-              dataset, test assumptions, choose the model, validate results, explain limitations, and translate
-              technical findings into actions for customer experience, marketing, product, and support teams.
+              The workflow emphasizes secure analytical ownership: define the business problem, prepare trusted
+              context, protect sensitive data, ground model responses, validate assumptions, and translate
+              AI-assisted findings into actions for planning, operations, research, and leadership teams.
             </p>
           </div>
           <div className="ai-methodology-steps">
@@ -175,11 +178,10 @@ const AIAnalytics = () => {
       </section>
 
       <section className="relative z-10 mt-20">
-        <h2 className="text-heading">CX Data Science Projects</h2>
+        <h2 className="text-heading">GenAI Analytics Projects</h2>
         <p className="max-w-3xl mt-4 subtext">
-          These projects are positioned for technical customer experience analytics: marketing segmentation,
-          customer support intelligence, NLP over feedback, regression-based driver analysis, and AI-assisted
-          methods with clear validation.
+          These projects are positioned for GenAI analytics work: natural-language operational analysis,
+          semantic document extraction, guided root-cause workflows, and AI methods with clear validation.
         </p>
         <div className="grid grid-cols-1 gap-4 mt-8 lg:grid-cols-2">
           {cxProjects.map((project) => (
@@ -215,8 +217,8 @@ const AIAnalytics = () => {
       <section className="relative z-10 mt-20">
         <h2 className="text-heading">Technical Stack Alignment</h2>
         <p className="max-w-3xl mt-4 subtext">
-          Role-aligned skills across customer support analytics, marketing analytics, statistical modeling,
-          machine learning, NLP, dashboarding, and responsible AI-assisted analysis.
+          Role-aligned skills across RAG, semantic extraction, secure AI access,
+          NLP, governed datasets, dashboarding, and responsible AI-assisted analysis.
         </p>
         <div className="ai-stack-wall">
           {aiStack.map((item) => (

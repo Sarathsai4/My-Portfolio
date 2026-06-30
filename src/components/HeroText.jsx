@@ -1,8 +1,9 @@
 import { FlipWords } from "./FlipWords";
 import { motion } from "motion/react";
+import { profile } from "../constants";
 
 const HeroText = () => {
-  const words = ["Trusted", "Cloud-Native", "Analytics-Ready"];
+  const words = ["AWS-Ready", "OLAP-Modeled", "GenAI-Enabled"];
 
   const variants = {
     hidden: { opacity: 0, x: -50 },
@@ -20,7 +21,7 @@ const HeroText = () => {
           animate="visible"
           transition={{ delay: 1 }}
         >
-          Hi, I am Sarath Sai Grandhe
+          Hi, I am {profile.name}
         </motion.h1>
 
         <div className="flex flex-col items-start">
@@ -31,7 +32,7 @@ const HeroText = () => {
             animate="visible"
             transition={{ delay: 1.2 }}
           >
-            Data Analyst & Data Engineer <br /> building
+            Data Engineer building <br />
           </motion.p>
 
           <motion.div
@@ -53,7 +54,7 @@ const HeroText = () => {
             animate="visible"
             transition={{ delay: 1.8 }}
           >
-            Data Products
+            Trusted Analytics Products
           </motion.p>
 
           <motion.div
@@ -67,7 +68,7 @@ const HeroText = () => {
               Data Engineering
             </a>
             <a className="role-link" href="#/data-analyst">
-              Data Analytics
+              Analytics Engineering
             </a>
           </motion.div>
         </div>
@@ -82,7 +83,7 @@ const HeroText = () => {
           animate="visible"
           transition={{ delay: 1 }}
         >
-          Hi, I am Sarath
+          Hi, I am {profile.shortName}
         </motion.p>
 
         <div>
@@ -115,7 +116,7 @@ const HeroText = () => {
             animate="visible"
             transition={{ delay: 1.8 }}
           >
-            Data Products
+            Analytics Products
           </motion.p>
 
           <motion.div
@@ -129,7 +130,7 @@ const HeroText = () => {
               Data Engineering
             </a>
             <a className="role-link" href="#/data-analyst">
-              Data Analytics
+              Analytics Engineering
             </a>
           </motion.div>
         </div>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "motion/react";
+import { profile } from "../constants";
 function Navigation() {
   return (
     <ul className="nav-ul">
@@ -20,7 +21,7 @@ function Navigation() {
       </li>
       <li className="nav-li">
         <a className="nav-link" href="#/ai-analytics">
-          AI / ML
+          GenAI
         </a>
       </li>
       <li className="nav-li">
@@ -51,7 +52,7 @@ const Navbar = () => {
             href="#home"
             className="text-xl font-bold transition-colors text-neutral-400 hover:text-white"
           >
-            Sarath
+            {profile.shortName}
           </a>
           <button
             onClick={() => setIsOpen(!isOpen)}

@@ -1,4 +1,4 @@
-import { contactEmail } from "../constants";
+import { contactEmail, profile } from "../constants";
 
 const Footer = () => {
   return (
@@ -11,10 +11,10 @@ const Footer = () => {
         <p>|</p>
         <a href="#/data-engineer" className="hover:text-white">Data Engineer</a>
         <p>|</p>
-        <a href="#/ai-analytics" className="hover:text-white">AI / ML</a>
+        <a href="#/ai-analytics" className="hover:text-white">GenAI</a>
       </div>
       <a className="hover:text-white" href={`mailto:${contactEmail}`}>{contactEmail}</a>
-      <p>&copy; 2026 Sarath Sai Grandhe. All rights reserved.</p>
+      <p>&copy; 2026 {profile.name}. All rights reserved.</p>
     </section>
   );
 };

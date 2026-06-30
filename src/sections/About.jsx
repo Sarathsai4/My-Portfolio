@@ -24,7 +24,7 @@ const About = () => {
         <div className="grid-black-color grid-3">
           <div className="relative z-10 w-[58%] sm:w-[52%]">
             <p className="headtext">Time Zone</p>
-            <p className="subtext">I am based in Cincinnati and open to data analyst, analytics engineering, and data engineering roles.</p>
+            <p className="subtext">I am based in the USA and focused on data engineering, analytics engineering, and GenAI analytics roles.</p>
           </div>
           <figure className="absolute right-3 top-1/2 size-[12.5rem] -translate-y-1/2 sm:right-6 sm:size-[14.5rem] md:size-[16rem]">
             <Globe className="size-full max-w-none" />
@@ -34,7 +34,7 @@ const About = () => {
         {/* Grid 4 */}
         <div className="grid-special-color grid-4">
           <div className="flex flex-col items-center justify-center gap-4 size-full">
-            <p className="text-center headtext">Reach me for data roles and analytics work.</p>
+            <p className="text-center headtext">Reach me for data engineering and analytics platform work.</p>
             <CopyEmailButton />
           </div>
         </div>

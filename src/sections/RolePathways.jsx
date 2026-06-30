@@ -2,9 +2,9 @@ import { contactEmail, roleCards } from "../constants";
 import { useEffect, useRef } from "react";
 
 const roleMetrics = {
-  "Data Analyst": ["KPI governance", "Customer analytics", "BI storytelling"],
-  "Data Engineer": ["Cloud pipelines", "Lakehouse layers", "Data observability"],
-  "AI / CX Analytics": ["Customer segmentation", "Support NLP", "Model validation"],
+  "Data Engineer": ["Cloud pipelines", "OLAP models", "Data observability"],
+  "Analytics Engineer": ["KPI governance", "BI layers", "Metric trust"],
+  "GenAI Analytics": ["RAG workflows", "Secure proxies", "AI root cause"],
 };
 
 const RolePathways = () => {
@@ -71,16 +71,16 @@ const RolePathways = () => {
               One portfolio, three data stories
             </h2>
             <p className="max-w-3xl mt-5 text-base leading-8 text-white/72 md:text-lg">
-              Analyst-ready insight on one side, production-grade data systems on
-              another, and AI/CX analytics layered on top. The same foundation carries
-              KPI trust, governed metrics, cloud pipelines, customer segmentation,
-              support intelligence, and model validation.
+              Production-grade data systems on one side, analyst-ready BI layers on
+              another, and GenAI analytics layered on top. The same foundation carries
+              AWS pipelines, OLAP models, metric reconciliation, governed dashboards,
+              secure model access, and AI-assisted root-cause analysis.
             </p>
           </div>
 
           <div className="flex flex-wrap gap-3 mt-8">
             <a className="cinematic-profile-link" href="#/data-analyst">
-              Data Analyst Profile
+              Analytics Engineer Profile
             </a>
             <a className="cinematic-profile-link" href="#/data-engineer">
               Data Engineer Profile
