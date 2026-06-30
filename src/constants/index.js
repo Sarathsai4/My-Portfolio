@@ -378,5 +378,5 @@ export const certifications = [
 
 export const education = [
   "University of Cincinnati | Master of Science, Business Analytics | GPA: 3.85 / 4.0 | Dec 2025",
-  "Bapatla Engineering College | Bachelor of Technology, Civil Engineering | GPA: 3.2 / 4.0 | Apr 2018",
+  "Bapatla Engineering College | Bachelor of Technology | GPA: 3.2 / 4.0 | Apr 2018",
 ];
